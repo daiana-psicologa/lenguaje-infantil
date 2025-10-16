@@ -3,8 +3,31 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lenguaje Infantil · Estimulación del lenguaje</title>
-<meta name="description" content="Estimulación y desarrollo del lenguaje infantil. Observación psicológica integral, enfoque lúdico y recursos con respaldo científico. Atención presencial.">
+
+<title>Lenguaje Infantil en Neuquén · Estimulación del lenguaje</title>
+<meta name="description" content="Estimulación y desarrollo del lenguaje infantil en Neuquén Capital. Observación psicológica integral, enfoque lúdico y recursos con respaldo científico. Atención presencial.">
+<meta name="keywords" content="lenguaje infantil Neuquén, estimulación del lenguaje Neuquén Capital, psicología infantil Neuquén, desarrollo del lenguaje, sesiones para niños">
+<meta name="author" content="Daiana Beltrán">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Lenguaje Infantil en Neuquén · Estimulación del lenguaje">
+<meta property="og:description" content="Psicología infantil: observación psicológica integral, enfoque lúdico y estrategias con respaldo científico. Atención presencial en Neuquén Capital.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<!-- Si ya tenés la URL pública, reemplaza el # por la URL real -->
+<meta property="og:url" content="#">
+<meta property="og:image" content="#">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lenguaje Infantil en Neuquén · Estimulación del lenguaje">
+<meta name="twitter:description" content="Observación psicológica integral y sesiones lúdicas adaptadas a cada niño. Neuquén Capital.">
+
+<!-- Regional targeting -->
+<meta name="geo.region" content="AR-NQ">
+<meta name="geo.placename" content="Neuquén Capital">
+<meta name="geo.position" content="-38.9516;-68.0591">
+<meta name="ICBM" content="-38.9516, -68.0591">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,24 +42,16 @@
   --shadow-s:0 10px 28px rgba(40,30,10,.10);
   --shadow-m:0 28px 56px rgba(40,30,10,.16);
 }
-
-/* ===== Base tipográfica más aireada ===== */
 *{box-sizing:border-box}
 html,body{margin:0}
 body{
   font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--ink); background:var(--bg); -webkit-font-smoothing:antialiased;
-  line-height:1.72;                 /* ↑ interlineado general */
-  letter-spacing:0.01em;            /* ↑ leve tracking */
+  line-height:1.74;          /* más interlineado */
+  letter-spacing:.006em;      /* leve separación de letras */
 }
-p{margin:0.2rem 0 0.9rem}           /* más espacio entre párrafos */
-.lede{line-height:1.78}             /* aún más aire en el párrafo inicial */
-.card p, .box p, .faqi .inner{line-height:1.74}
-summary{line-height:1.6}
-h1,h2,h3{letter-spacing:-0.004em}   /* títulos firmes pero sin apretar */
-h2{margin:0 0 10px}
-
-/* Layout */
+p{margin:.2rem 0 1rem}
+.lede{color:var(--muted); max-width:70ch; line-height:1.8}
 .container{max-width:var(--max); margin:auto; padding:0 22px}
 section{padding:68px 0}
 img{max-width:100%; display:block}
@@ -97,7 +112,7 @@ h1{font:900 clamp(32px,5.6vw,58px)/1.08 Inter; margin:6px 0 12px}
 .proc{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
 .proc .step{background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:var(--shadow-s)}
 
-/* Gallery (sin estirar imágenes) */
+/* Gallery (mantener imágenes como están, sin estirar) */
 .gallery{display:grid; grid-template-columns:1.25fr .75fr; gap:24px}
 .g-main figure{border-radius:18px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-m)}
 .g-main img{width:100%; height:auto; display:block}
@@ -108,7 +123,7 @@ h1{font:900 clamp(32px,5.6vw,58px)/1.08 Inter; margin:6px 0 12px}
   min-height:240px;
 }
 .g-aside img{
-  width:100%; height:auto;            /* ← respeta proporción */
+  width:100%; height:auto;           /* respeta proporción */
   object-fit:contain; object-position:center;
   display:block;
 }
@@ -136,6 +151,53 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .gallery{grid-template-columns:1fr}
 }
 </style>
+
+<!-- Schema.org (JSON-LD): Negocio Local de Psicología Infantil en Neuquén -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Lenguaje Infantil · Psicología",
+  "description":"Estimulación y desarrollo del lenguaje infantil en Neuquén Capital. Observación psicológica integral, enfoque lúdico y recursos con respaldo científico. Atención presencial.",
+  "url":"#",
+  "telephone":"+54 9 299 604 4900",
+  "areaServed": "Neuquén Capital, AR",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Neuquén",
+    "addressRegion":"Neuquén",
+    "addressCountry":"AR"
+  },
+  "image":"#",
+  "sameAs":[
+  ]
+}
+</script>
+
+<!-- Schema.org (JSON-LD): FAQ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"¿Qué incluyen las sesiones?",
+      "acceptedAnswer":{"@type":"Answer","text":"Observación inicial, plan individual con objetivos, intervenciones lúdicas y seguimiento. Cuando es útil, coordinación con escuela y profesionales involucrados."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Cómo reservo y coordino el horario?",
+      "acceptedAnswer":{"@type":"Answer","text":"Escribí por WhatsApp con tu disponibilidad. Reservo el turno con una seña de $10.000. Si necesitás reprogramar, avisá con 48 h de antelación; con menos aviso, la seña se pierde."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Cuál es la duración de las sesiones?",
+      "acceptedAnswer":{"@type":"Answer","text":"Las sesiones son de 40 minutos. La frecuencia se define según objetivos y ritmo del niño; se revisa durante el proceso."}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -150,7 +212,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
       <a href="#ayuda">Enfoque</a>
       <a href="#proceso">Proceso</a>
       <a href="#ambiente">Ambiente</a>
-      <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
+      <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil%20en%20Neuqu%C3%A9n."
          target="_blank" rel="noopener">Reservar por WhatsApp</a>
     </nav>
   </div>
@@ -158,7 +220,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 
 <section class="container hero" id="inicio">
   <div>
-    <div class="eyebrow">Psicología infantil · lenguaje</div>
+    <div class="eyebrow">Psicología infantil · Neuquén Capital</div>
     <h1>Desarrollo y estimulación del lenguaje</h1>
     <p class="lede">
       Realizo <strong>observación psicológica integral</strong> y diseño sesiones
@@ -168,7 +230,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
       <strong>respaldo científico</strong>, para que la comunicación sea clara y funcional.
     </p>
     <div class="actions">
-      <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
+      <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil%20en%20Neuqu%C3%A9n."
          target="_blank" rel="noopener">Reservar por WhatsApp</a>
       <a class="btn btn-ghost" href="#que">Ver qué incluyo</a>
     </div>
@@ -231,7 +293,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
     </div>
   </div>
   <div class="actions" style="margin-top:14px">
-    <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20%C2%BFten%C3%A9s%20disponibilidad%20para%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil%3F"
+    <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20%C2%BFten%C3%A9s%20disponibilidad%20para%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil%20en%20Neuqu%C3%A9n%3F"
        target="_blank" rel="noopener">Consultar disponibilidad</a>
   </div>
 </section>
@@ -267,7 +329,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
         <strong>seña de $10.000</strong>. Si necesitás reprogramar, avisá con
         <strong>48 h</strong> de antelación; con menos aviso, la seña se pierde.
         <div style="margin-top:10px">
-          <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quiero%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
+          <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quiero%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil%20en%20Neuqu%C3%A9n."
              target="_blank" rel="noopener">Reservar por WhatsApp</a>
         </div>
       </div>
@@ -286,7 +348,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   <div class="container footer">
     <div>
       <strong>Lenguaje Infantil</strong>
-      <p class="muted">Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Mirada clínica y lúdica.</p>
+      <p class="muted">Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Atención presencial en Neuquén Capital.</p>
       <div style="display:flex; gap:10px; flex-wrap:wrap">
         <a class="btn btn-ghost" href="#ayuda">Enfoque</a>
         <a class="cta" href="https://wa.me/5492996044900" target="_blank" rel="noopener">Escribime por WhatsApp</a>
@@ -304,7 +366,8 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
     <div>
       <h4>Contacto</h4>
       <div style="display:grid; gap:6px">
-        <span>Argentina · atención presencial</span>
+        <span>Neuquén Capital · Argentina</span>
+        <a href="tel:+5492996044900">+54 9 299 604 4900</a>
         <a href="mailto:comunicar.terapiadelenguaje@gmail.com">comunicar.terapiadelenguaje@gmail.com</a>
         <a href="https://wa.me/5492996044900" target="_blank" rel="noopener">WhatsApp directo</a>
       </div>
