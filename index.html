@@ -123,9 +123,12 @@ h1{font:900 clamp(32px,5.6vw,58px)/1.08 Inter; margin:6px 0 12px}
   min-height:240px;
 }
 .g-aside img{
-  width:100%; height:auto;           /* respeta proporción */
-  object-fit:contain; object-position:center;
-  display:block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;     /* mantiene proporción */
+  object-position: center; /* centrado real */
+  display: block;
 }
 
 /* FAQ simple */
