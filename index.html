@@ -19,12 +19,24 @@
   --shadow-s:0 10px 28px rgba(40,30,10,.10);
   --shadow-m:0 28px 56px rgba(40,30,10,.16);
 }
+
+/* ===== Base tipográfica más aireada ===== */
 *{box-sizing:border-box}
 html,body{margin:0}
 body{
   font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--ink); background:var(--bg); -webkit-font-smoothing:antialiased;
+  line-height:1.72;                 /* ↑ interlineado general */
+  letter-spacing:0.01em;            /* ↑ leve tracking */
 }
+p{margin:0.2rem 0 0.9rem}           /* más espacio entre párrafos */
+.lede{line-height:1.78}             /* aún más aire en el párrafo inicial */
+.card p, .box p, .faqi .inner{line-height:1.74}
+summary{line-height:1.6}
+h1,h2,h3{letter-spacing:-0.004em}   /* títulos firmes pero sin apretar */
+h2{margin:0 0 10px}
+
+/* Layout */
 .container{max-width:var(--max); margin:auto; padding:0 22px}
 section{padding:68px 0}
 img{max-width:100%; display:block}
@@ -51,8 +63,7 @@ nav.nav a{color:#342f28; text-decoration:none; font-weight:800}
 /* Hero */
 .hero{display:grid; grid-template-columns:1.02fr .98fr; gap:48px; align-items:center; padding:78px 0}
 .eyebrow{font-weight:900; letter-spacing:.12em; text-transform:uppercase; color:#6d44ff; font-size:.86rem}
-h1{font:900 clamp(32px,5.6vw,58px)/1.05 Inter; margin:6px 0 10px}
-.lede{color:var(--muted); max-width:70ch}
+h1{font:900 clamp(32px,5.6vw,58px)/1.08 Inter; margin:6px 0 12px}
 .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
 .btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; text-decoration:none; font-weight:900}
 .btn-ghost{background:#fff; border:1px solid var(--line); color:#2f2a24; padding:12px 18px; box-shadow:var(--shadow-s)}
@@ -76,31 +87,34 @@ h1{font:900 clamp(32px,5.6vw,58px)/1.05 Inter; margin:6px 0 10px}
 
 /* List & cards */
 .ul{margin:0; padding:0 0 0 1.1rem}
+.ul li{margin:0 0 10px}
 .grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
 .card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow-s)}
-.card h3{margin:6px 0 6px}
+.card h3{margin:6px 0 8px}
 .tag{display:inline-block; font-size:.78rem; font-weight:800; padding:6px 10px; border-radius:999px; background:#efe7ff; color:#5a3eff}
 
 /* Process */
 .proc{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
 .proc .step{background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:var(--shadow-s)}
 
-/* Gallery */
+/* Gallery (sin estirar imágenes) */
 .gallery{display:grid; grid-template-columns:1.25fr .75fr; gap:24px}
 .g-main figure{border-radius:18px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-m)}
+.g-main img{width:100%; height:auto; display:block}
 .g-aside{display:grid; gap:22px}
 .g-aside figure{
   border-radius:18px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-s);
-  display:flex; align-items:center; justify-content:center;   /* centra vertical y horizontal */
-  min-height:240px;                                          /* alto cómodo para centrar */
+  display:flex; align-items:center; justify-content:center;
+  min-height:240px;
 }
 .g-aside img{
-  max-width:100%; max-height:100%;
-  object-fit:contain; object-position:center;                /* asegura centrado real */
+  width:100%; height:auto;            /* ← respeta proporción */
+  object-fit:contain; object-position:center;
+  display:block;
 }
 
 /* FAQ simple */
-.faq{display:grid; gap:10px}
+.faq{display:grid; gap:12px}
 details.faqi{background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow-s); overflow:hidden}
 details.faqi summary{
   list-style:none; cursor:pointer; padding:16px; font-weight:900; display:flex; justify-content:space-between; align-items:center
@@ -116,6 +130,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 .footer a{text-decoration:none; color:#2e2a26}
 .legal{display:flex; justify-content:space-between; align-items:center; padding:10px 0 24px; color:#6f6a62; font-size:.92rem}
 
+/* Responsive */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
@@ -304,6 +319,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 <script>
 // año dinámico
 document.getElementById('y').textContent = new Date().getFullYear();
+
 // scroll suave
 document.addEventListener('click', (e)=>{
   const a = e.target.closest('a[href^="#"]'); if(!a) return;
