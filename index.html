@@ -1,427 +1,354 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lenguaje Infantil – Psico · Estimulación del Lenguaje</title>
-  <meta name="description" content="Psicología infantil con enfoque en desarrollo y estimulación del lenguaje. Evaluaciones, intervención y orientación a familias.">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Lenguaje Infantil · Estimulación del lenguaje (psicología infantil)</title>
+  <meta name="description" content="Psicología infantil con enfoque en desarrollo y estimulación del lenguaje. Evaluación clínica, intervención lúdica basada en evidencia y orientación a familias para comunicación funcional.">
+
+  <!-- Favicon provisional (tu retrato). Cuando tengas logo, cámbialo -->
+  <link rel="icon" href="retrato-perfil.png" type="image/png"/>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://daiana-psicologa.github.io/lenguaje-infantil/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lenguaje Infantil · Estimulación del lenguaje"/>
+  <meta property="og:description" content="Desarrollo y estimulación del lenguaje desde un enfoque psicológico. Evaluación clínica, sesiones lúdicas y herramientas para casa."/>
+  <meta property="og:image" content="https://daiana-psicologa.github.io/lenguaje-infantil/infantil2.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://daiana-psicologa.github.io/lenguaje-infantil/"/>
+  <meta property="og:site_name" content="Lenguaje Infantil"/>
+  <meta property="og:locale" content="es_AR"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Lenguaje Infantil · Estimulación del lenguaje"/>
+  <meta name="twitter:description" content="Psicología infantil · lenguaje, habla, aprendizaje y socioemocional con actividades lúdicas basadas en evidencia."/>
+  <meta name="twitter:image" content="https://daiana-psicologa.github.io/lenguaje-infantil/infantil2.jpg"/>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Lenguaje Infantil",
+    "description": "Psicología infantil con enfoque en desarrollo y estimulación del lenguaje. Evaluación clínica, intervención lúdica y orientación a familias.",
+    "medicalSpecialty": ["SpeechPathology","Pediatrics","MentalHealth"],
+    "areaServed": "AR",
+    "url": "https://daiana-psicologa.github.io/lenguaje-infantil/",
+    "image": "https://daiana-psicologa.github.io/lenguaje-infantil/infantil2.jpg",
+    "availableService": {
+      "@type": "MedicalTherapy",
+      "name": "Estimulación del lenguaje (infancia)"
+    }
+  }
+  </script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #F9F6EF;            /* crema */
-      --paper: #fff;
-      --ink: #2b2b2b;
-      --muted:#666;
-      --brand:#6F3FA9;          /* lila */
-      --brand-2:#1FB7A6;        /* menta */
-      --accent:#F7A53B;         /* naranja suave */
-      --card: #ffffffcc;
-      --radius: 20px;
-      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --ink:#2b2930; --muted:#5b5662;
+      --bg:#FFF9F2; --paper:#ffffff;
+      --brand:#7b5cff;        /* lila suave */
+      --brand-2:#ff8aa6;      /* coral */
+      --band:#F6F1FF;         /* lila claro */
+      --line:#ece7f8;
+      --radius:18px; --shadow:0 18px 40px rgba(35,10,70,.08);
+      --max:1120px; --narrow:940px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+
+    .container{max-width:var(--max);margin:auto;padding:0 22px}
+    section{padding:64px 0}
     img{max-width:100%;display:block}
-    a{color:inherit}
-    .wrap{width:min(1200px, 92vw);margin-inline:auto}
-    .title{font-family:"Baloo 2", cursive;letter-spacing:.2px}
-    .btn{
-      display:inline-flex;align-items:center;gap:.6rem;
-      background:var(--brand-2);color:white;border:none;
-      padding:.9rem 1.2rem;border-radius:14px;font-weight:700;
-      text-decoration:none;box-shadow:var(--shadow);
-      transition:transform .15s ease, box-shadow .15s ease;
-    }
-    .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(0,0,0,.12)}
-    .btn.alt{background:var(--paper);color:var(--ink);border:2px solid #ddd}
 
     /* Header */
     header{
-      position:sticky;top:0;z-index:40;background:var(--bg);
-      backdrop-filter:saturate(120%) blur(6px);
-      border-bottom:1px solid #eee;
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,249,242,.9); backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
     }
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:.8rem 0;
+    .top{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:46px;height:46px;border-radius:14px;background:#fff;border:1px solid var(--line);
+      box-shadow:0 6px 16px rgba(0,0,0,.06); display:grid; place-items:center; overflow:hidden
     }
-    .brand{
-      display:flex;align-items:center;gap:.8rem;text-decoration:none
+    .logo img{width:40px;height:40px;object-fit:contain}
+    .title{font:700 18px/1.1 Baloo 2, cursive}
+    nav{display:flex;gap:22px;align-items:center}
+    nav a{text-decoration:none;color:var(--ink);font-weight:700}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 18px;border-radius:999px;font-weight:800;text-decoration:none;color:#fff;
+      background-image:linear-gradient(90deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)
     }
-    .brand-badge{
-      width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#8c5ed0);display:grid;place-items:center;color:#fff;font-weight:800
+    .btn-lite{
+      background:#fff;border:1px solid var(--line);color:var(--ink);box-shadow:0 10px 24px rgba(35,10,70,.06)
     }
-    .brand-name{font-family:"Baloo 2";font-size:1.25rem}
-    .menu{display:flex;gap:1rem;align-items:center}
-    .menu a{padding:.5rem .7rem;border-radius:10px;text-decoration:none;color:#333;font-weight:600}
-    .menu a:hover{background:#f0ebff}
 
-    /* Hero */
-    .hero{
-      position:relative;isolation:isolate
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:72px 0}
+    .eyebrow{font:900 .85rem/1 Inter;color:#7b5cff;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+    h1{font:800 clamp(34px,5.4vw,56px)/1.06 Baloo 2, cursive;margin:0 0 8px}
+    .lede{color:var(--muted);max-width:70ch}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .photo{position:relative}
+    .frame{
+      width:min(520px,92%);aspect-ratio:1/1;border-radius:28px;
+      background:linear-gradient(145deg,#efe9ff 0%,#ffdce5 100%);box-shadow:0 26px 60px rgba(35,10,70,.12)
     }
-    .hero-grid{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;
-      padding:clamp(1.2rem, 2.8vw, 2.5rem) 0 2rem;
-    }
-    .hero h1{font-size:clamp(2.1rem, 4.6vw, 3.8rem);line-height:1.04;margin:.2rem 0 .8rem}
-    .lead{color:var(--muted);font-size:clamp(1.05rem,1.6vw,1.15rem)}
-    .cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.1rem}
-    .hero-figure{
-      position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:var(--paper)
-    }
-    .hero-figure img.cover{height:100%;width:100%;object-fit:cover;aspect-ratio:4/3}
     .portrait{
-      position:absolute;right:1rem;bottom:1rem;width:120px;height:120px;border-radius:50%;
-      border:6px solid var(--paper);overflow:hidden;box-shadow:var(--shadow)
+      position:absolute;bottom:-14px;right:6%;
+      width:min(620px,96%);max-width:600px;filter:drop-shadow(0 28px 48px rgba(0,0,0,.18))
     }
 
-    /* Section blocks */
-    section{padding:clamp(2rem, 6vw, 3.8rem) 0}
-    .section-head{margin-bottom:1.4rem}
-    .section-head .eyebrow{
-      text-transform:uppercase;letter-spacing:.14em;color:var(--brand-2);
-      font-weight:800;font-size:.85rem
-    }
-    .section-head h2{font-size:clamp(1.6rem,3vw,2.4rem);margin:.35rem 0}
-    .grid-3{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem
-    }
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+    /* Band */
+    .band{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+    /* Cards “Quiero ayudarte” */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
     .card{
-      background:var(--card);border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow)
+      background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)
     }
-    .card h3{margin:.2rem 0 .4rem;font-size:1.25rem}
-    .muted{color:var(--muted)}
-    .pill{display:inline-block;background:#efe9ff;color:var(--brand);border-radius:999px;padding:.25rem .7rem;font-weight:700;font-size:.82rem}
+    .tag{display:inline-block;font:800 .78rem/1 Inter;background:#efe9ff;color:#5b3cc5;padding:6px 10px;border-radius:999px}
+    .card h3{margin:10px 0 6px}
+    .card p{margin:0;color:#4a4551}
 
-    /* Who benefits (accordion-style) */
-    .accordion{display:grid;gap:.9rem}
-    .acc-item{background:var(--paper);border-radius:16px;padding:.95rem 1.1rem;box-shadow:var(--shadow)}
-    .acc-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer}
-    .acc-head h4{margin:0;font-size:1.05rem}
-    .acc-toggle{width:32px;height:32px;border-radius:10px;background:#e7d9ff;color:var(--brand);display:grid;place-items:center;font-weight:900}
-    .acc-body{grid-template-rows:0fr;display:grid;transition:grid-template-rows .25s ease}
-    .acc-body > div{overflow:hidden}
-    .acc-item.open .acc-body{grid-template-rows:1fr}
-    .acc-item.open .acc-toggle{background:var(--brand);color:#fff}
+    /* Secciones de texto */
+    .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .step{background:#fff;border:1px dashed #e8e2f7;border-radius:14px;padding:14px}
 
-    /* Gallery */
-    .gallery{
-      display:grid;grid-template-columns:2fr 1fr 1fr;gap:1.1rem
-    }
-    .gallery .tile{
-      background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)
-    }
-    .gallery img{width:100%;height:100%;object-fit:cover}
+    /* Galería */
+    .gallery{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+    .gallery img{border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);height:100%;object-fit:cover}
+    .gallery .col{display:grid;gap:16px}
+
+    /* FAQ simple */
+    .acc{max-width:var(--narrow);margin:0 auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:8px 12px}
+    details+details{margin-top:10px}
+    summary{list-style:none;cursor:pointer;font-weight:800}
+    summary::-webkit-details-marker{display:none}
+    .faqp{color:#4c4653;margin:.6rem 0 0}
 
     /* Footer */
-    footer{background:linear-gradient(180deg,#8b61d6,var(--brand));color:#fff;padding:2.6rem 0;margin-top:2rem}
-    footer a{color:#fff;text-decoration:none}
-    .foot-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1.6rem}
-    .foot small{opacity:.85}
+    footer{background:#fff;border-top:1px solid var(--line);margin-top:36px}
+    .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:22px;padding:28px 0}
+    .foot h4{margin:6px 0 8px}
+    .foot a{text-decoration:none;color:var(--ink)}
+    .legal{display:flex;justify-content:space-between;align-items:center;padding:12px 0 26px;color:#6c6674;font-size:.95rem}
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      .gallery{grid-template-columns:1fr 1fr}
-      .portrait{right:.8rem;bottom:.8rem;width:96px;height:96px}
-      .menu{display:none}
-      .menu-btn{display:inline-flex}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+      .foot{grid-template-columns:1fr}
+      .portrait{right:auto;left:50%;transform:translateX(-50%)}
     }
-    .menu-btn{display:none;border:0;background:transparent;font-weight:800;padding:.4rem .6rem;border-radius:10px}
-    .mobile-nav{display:none}
-    .mobile-nav.open{display:block;background:var(--paper);border-radius:16px;padding:.6rem;box-shadow:var(--shadow);margin-top:.6rem}
-    .mobile-nav a{display:block;padding:.7rem;border-radius:10px;text-decoration:none;color:#333;font-weight:600}
-    .mobile-nav a:hover{background:#f0ebff}
   </style>
 </head>
+
 <body>
-
-  <!-- Header -->
+  <!-- HEADER -->
   <header>
-    <div class="wrap nav">
-      <a class="brand" href="#">
-        <span class="brand-badge">LI</span>
-        <span class="brand-name">Lenguaje Infantil</span>
-      </a>
-
-      <nav class="menu" aria-label="Principal">
-        <a href="#inicio">Home</a>
-        <a href="#enfoque">Enfoque</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#beneficios">Quiero ayudarte</a>
-        <a href="#faq">Preguntas</a>
-        <a class="btn alt" href="#contacto">Contacto</a>
+    <div class="container top">
+      <div class="brand">
+        <span class="logo"><img src="retrato-perfil.png" alt="Daiana · psicología infantil"></span>
+        <div class="title">Lenguaje Infantil</div>
+      </div>
+      <nav>
+        <a href="#sesiones">Sesiones</a>
+        <a href="#ayuda">Quiero ayudarte</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#galeria">Galería</a>
+        <a class="btn-lite" href="#contacto">Contacto</a>
       </nav>
-
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
-    </div>
-    <div class="wrap mobile-nav" id="mobileNav" aria-label="Navegación móvil">
-      <a href="#inicio">Home</a>
-      <a href="#enfoque">Enfoque</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#beneficios">Quiero ayudarte</a>
-      <a href="#faq">Preguntas</a>
-      <a href="#contacto">Contacto</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="inicio">
-    <div class="wrap hero-grid">
+  <!-- HERO -->
+  <section class="container hero" id="inicio">
+    <div>
+      <div class="eyebrow">Psicología infantil</div>
+      <h1>Desarrollo y Estimulación del Lenguaje</h1>
+      <p class="lede">
+        Me enfoco en la observación clínica y sesiones <strong>adaptadas a cada niño</strong>.
+        Vinculo el área socioemocional con <strong>lenguaje, habla y aprendizaje</strong>, usando
+        métodos basados en evidencia y actividades lúdicas para que la comunicación sea funcional en casa, escuela y juego.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#ayuda">Ver cómo puedo ayudarte</a>
+        <a class="btn-lite" href="#contacto">Escribime</a>
+      </div>
+    </div>
+    <div class="photo" aria-hidden="true">
+      <div class="frame"></div>
+      <img class="portrait" src="retrato-perfil.png" alt="">
+    </div>
+  </section>
+
+  <!-- ¿QUÉ INCLUYEN LAS SESIONES? -->
+  <div class="band" id="sesiones">
+    <section class="container">
+      <h2 style="font-family:Baloo 2, cursive;margin:0 0 10px">¿Qué incluyen las sesiones de estimulación del lenguaje?</h2>
+      <div class="box" style="max-width:var(--narrow);margin:auto">
+        <p style="margin:.2rem 0 .8rem">
+          Evaluación clínica y diseño de objetivos funcionales. Intervención lúdica centrada en
+          <strong>lenguaje receptivo y expresivo, habla, vocabulario, juego y comunicación</strong>.
+          Integro estrategias para la <strong>regulación socioemocional</strong> y siempre te comparto
+          <em>herramientas prácticas para casa</em>.
+        </p>
+        <ul style="margin:.4rem 0 0 1.1rem">
+          <li>Observación y línea base (perfil de fortalezas y necesidades).</li>
+          <li>Plan individual con metas claras y medibles.</li>
+          <li>Sesiones lúdicas y progresivas; materiales visuales y auditivos.</li>
+          <li>Recomendaciones para el hogar y coordinación con escuela cuando hace falta.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- QUIERO AYUDARTE -->
+  <section class="container" id="ayuda">
+    <h2 style="font-family:Baloo 2, cursive;margin:0 0 12px;">Quiero ayudarte</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Comunicación</span>
+        <h3>Apoyo especializado para niños con desafíos en comunicación</h3>
+        <p>Si tu hijo tiene dificultades para hablar, comprender o expresarse, evalúo con precisión y aplicamos estrategias basadas en evidencia para fortalecer su comunicación.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Aprendizaje</span>
+        <h3>Terapia efectiva para niños con dificultades de aprendizaje</h3>
+        <p>Cuando leer, escribir o seguir consignas cuesta, una evaluación profesional brinda claridad. Diseño intervenciones personalizadas que respetan su ritmo y necesidades.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Desarrollo</span>
+        <h3>Soluciones para niños con desafíos en el desarrollo</h3>
+        <p>Atiendo dificultades en habla, juego, regulación emocional o procesamiento sensorial, con técnicas psicológicas que potencian la autonomía y la comunicación funcional.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Familia</span>
+        <h3>Apoyo para familias que buscan orientación y estrategias</h3>
+        <p>Te brindo orientación clara, recomendaciones prácticas y herramientas para acompañar el crecimiento de tu hijo desde casa con confianza y seguridad.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ¿Puede mejorar lo social? + Cómo inicio -->
+  <section class="container">
+    <div class="grid" style="align-items:start">
+      <div class="box">
+        <h3 style="margin:.2rem 0 .4rem;font-family:Baloo 2, cursive">¿Mi hijo puede mejorar sus habilidades sociales?</h3>
+        <p style="margin:.2rem 0">
+          Absolutamente. Una parte esencial del trabajo se centra en el desarrollo de habilidades
+          <strong>socioemocionales y comunicativas</strong>. Con actividades dirigidas e interacciones
+          guiadas, ayudamos a mejorar turnos de palabra, contacto visual, juego compartido y confianza.
+        </p>
+      </div>
+      <div class="box" id="proceso">
+        <h3 style="margin:.2rem 0 .4rem;font-family:Baloo 2, cursive">¿Cómo inicio el proceso?</h3>
+        <div class="steps">
+          <div class="step">
+            <strong>1) Entrevista de admisión</strong>
+            <p class="faqp">Nos conocemos, relevamos historia y definimos preocupaciones y objetivos.</p>
+          </div>
+          <div class="step">
+            <strong>2) Evaluación clínica</strong>
+            <p class="faqp">Observación y pruebas según la edad; elaboro un plan de trabajo claro.</p>
+          </div>
+          <div class="step">
+            <strong>3) Intervención y acompañamiento</strong>
+            <p class="faqp">Sesiones lúdicas, ajustes periódicos y estrategias simples para casa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <div class="band" id="galeria">
+    <section class="container">
+      <h2 style="font-family:Baloo 2, cursive;margin:0 0 12px">Ambiente & materiales</h2>
+      <div class="gallery">
+        <img src="infantil2.jpg" alt="Consultorio de lenguaje infantil">
+        <div class="col">
+          <img src="infantil1.jpg" alt="Recursos lúdicos para intervención">
+          <img src="infantil3.jpg" alt="Espacio de juego y comunicación">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ breve -->
+  <section>
+    <div class="acc">
+      <details>
+        <summary>¿Con qué frecuencia conviene asistir?</summary>
+        <p class="faqp">Semanal o quincenal. Revisamos avances y ajustamos el plan para sostener resultados.</p>
+      </details>
+      <details>
+        <summary>¿Entregás recomendaciones para casa?</summary>
+        <p class="faqp">Sí. Siempre te doy pautas simples y sostenibles para integrar en la rutina familiar.</p>
+      </details>
+      <details>
+        <summary>¿Trabajás con la escuela?</summary>
+        <p class="faqp">Si hace falta, coordino con docentes/EOE para que las estrategias se generalicen.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACTO -->
+  <footer id="contacto">
+    <div class="container foot">
       <div>
-        <span class="pill">Psicología infantil · Lenguaje</span>
-        <h1 class="title">¡Donde el progreso comienza!</h1>
-        <p class="lead">
-          Acompaño a tu hijo/a en el desarrollo del <strong>lenguaje</strong> desde un
-          <strong>enfoque psicológico</strong>: observación clínica, evaluación cuidadosa
-          e intervención lúdica basada en evidencia. Trabajo el vínculo entre
-          <em>socioemocional</em>, <em>comunicación</em> y <em>aprendizaje</em> para que la
-          comunicación sea útil y funcional en la vida diaria.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="#contacto">Agendar Consulta</a>
-          <a class="btn alt" href="#beneficios">Cómo te ayudo</a>
+        <h4 style="margin:0 0 8px">Lenguaje Infantil</h4>
+        <p class="faqp" style="margin:.2rem 0 .8rem">Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Atención con mirada clínica y lúdica.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn-lite" href="#ayuda">Quiero ayudarte</a>
+          <a class="btn" href="mailto:comunicar.terapiadelenguaje@gmail.com">Escribime un e-mail</a>
         </div>
       </div>
-
-      <div class="hero-figure">
-        <!-- Usamos la imagen grande (infantil2.jpg) como base -->
-        <img class="cover" src="./infantil2.jpg" alt="Espacio terapéutico infantil" loading="eager">
-        <!-- Tu retrato redondo arriba -->
-        <div class="portrait" aria-hidden="true">
-          <img src="./retrato-perfil.png" alt="Psicóloga infantil" loading="lazy">
+      <div>
+        <h4>Secciones</h4>
+        <div style="display:grid;gap:6px">
+          <a href="#sesiones">Sesiones</a>
+          <a href="#ayuda">Quiero ayudarte</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#galeria">Galería</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Enfoque -->
-  <section id="enfoque">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Mi enfoque</div>
-        <h2 class="title">Psicología del desarrollo + Estimulación del lenguaje</h2>
-        <p class="muted">
-          Cada niño es atendido con un <strong>plan único</strong>, diseñado para identificar
-          no solo los desafíos del lenguaje, sino también su impacto en la
-          <strong>comunicación funcional</strong>. Implemento estrategias prácticas que
-          pueden integrarse en la vida diaria: lo que hacemos en sesión está pensado
-          para funcionar en casa, la escuela y los juegos con pares.
-        </p>
-      </div>
-
-      <div class="grid-3">
-        <article class="card">
-          <span class="pill">Evaluación</span>
-          <h3 class="title">Observación clínica</h3>
-          <p class="muted">Entrevista de admisión y valoración del perfil
-            comunicativo, socioemocional y de aprendizaje para definir objetivos
-            claros y alcanzables.</p>
-        </article>
-
-        <article class="card">
-          <span class="pill">Intervención</span>
-          <h3 class="title">Juego + evidencia</h3>
-          <p class="muted">Actividades lúdicas y estrategias basadas en evidencia para
-            potenciar vocabulario, articulación, comprensión y uso social del
-            lenguaje.</p>
-        </article>
-
-        <article class="card">
-          <span class="pill">Familia</span>
-          <h3 class="title">Herramientas para casa</h3>
-          <p class="muted">Te acompaño con pautas simples para integrar el trabajo en la
-            rutina: así logramos cambios <em>efectivos</em> y <em>sostenibles</em>.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios (galería + cards) -->
-  <section id="servicios">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Servicios</div>
-        <h2 class="title">Potenciando habilidades</h2>
-        <p class="muted">Intervenciones adaptadas a cada etapa del desarrollo infantil.</p>
-      </div>
-
-      <div class="gallery" style="margin-bottom:1.2rem">
-        <figure class="tile"><img src="./infantil2.jpg" alt="Sala de terapia infantil" loading="lazy"></figure>
-        <figure class="tile"><img src="./infantil1.jpg" alt="Materiales de juego" loading="lazy"></figure>
-        <figure class="tile"><img src="./infantil3.jpg" alt="Espacio de consulta" loading="lazy"></figure>
-      </div>
-
-      <div class="grid-3">
-        <article class="card">
-          <h3 class="title">Lenguaje y Aprendizaje</h3>
-          <p class="muted">Estimulación del lenguaje, pronunciación, vocabulario y
-            comprensión. Fomento de habilidades de atención, memoria de trabajo y
-            planificación para apoyar el aprendizaje.</p>
-        </article>
-        <article class="card">
-          <h3 class="title">Habilidades Sociales</h3>
-          <p class="muted">Interacciones dirigidas para mejorar turnos de conversación,
-            contacto visual, comprensión de claves sociales y confianza para
-            participar con pares.</p>
-        </article>
-        <article class="card">
-          <h3 class="title">Orientación a Familias</h3>
-          <p class="muted">Recomendaciones claras y herramientas para acompañar el
-            crecimiento desde casa con seguridad y calma.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quiero ayudarte (beneficios) -->
-  <section id="beneficios">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Quiero ayudarte</div>
-        <h2 class="title">Acompañamiento que se nota en lo cotidiano</h2>
-      </div>
-
-      <div class="grid-2">
-        <article class="card">
-          <h3 class="title">Apoyo especializado para niños con desafíos en comunicación</h3>
-          <p class="muted">Si tu hijo tiene dificultades para hablar, comprender o
-            expresarse, evalúo su perfil y aplico estrategias basadas en evidencia
-            para fortalecer su comunicación funcional.</p>
-        </article>
-        <article class="card">
-          <h3 class="title">Terapia efectiva para niños con dificultades de aprendizaje</h3>
-          <p class="muted">Cuando hay retos para leer, escribir o seguir instrucciones,
-            un plan personalizado integra lenguaje y procesos cognitivos, respetando
-            su ritmo y necesidades.</p>
-        </article>
-        <article class="card">
-          <h3 class="title">Soluciones para desafíos en el desarrollo</h3>
-          <p class="muted">Si observás dificultades en el habla, el juego, la regulación
-            emocional o el procesamiento sensorial, adapto la intervención para
-            potenciar comunicación y autonomía.</p>
-        </article>
-        <article class="card">
-          <h3 class="title">Apoyo a familias con orientación clara</h3>
-          <p class="muted">Si no sabés por dónde empezar, te brindo una hoja de ruta,
-            estrategias prácticas y recursos para acompañar el proceso en casa.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Preguntas frecuentes -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Preguntas frecuentes</div>
-        <h2 class="title">Lo más consultado</h2>
-      </div>
-
-      <div class="accordion">
-        <div class="acc-item">
-          <div class="acc-head" role="button" tabindex="0">
-            <h4>¿Qué incluyen las sesiones de estimulación del lenguaje?</h4>
-            <div class="acc-toggle">+</div>
-          </div>
-          <div class="acc-body"><div>
-            <p class="muted">Incluyen evaluación clínica, objetivos personalizados y
-              actividades lúdicas que vinculan <strong>socioemocional</strong>, <strong>lenguaje</strong> y
-              <strong>aprendizaje</strong>. Buscamos maximizar el desarrollo y el bienestar
-              del niño.</p>
-          </div></div>
-        </div>
-
-        <div class="acc-item">
-          <div class="acc-head" role="button" tabindex="0">
-            <h4>¿Mi hijo puede mejorar sus habilidades sociales?</h4>
-            <div class="acc-toggle">+</div>
-          </div>
-          <div class="acc-body"><div>
-            <p class="muted">Sí. Trabajamos competencias sociales y comunicativas con
-              interacciones dirigidas para mejorar la participación con otros,
-              <strong>confianza</strong> y <strong>regulación</strong>.</p>
-          </div></div>
-        </div>
-
-        <div class="acc-item">
-          <div class="acc-head" role="button" tabindex="0">
-            <h4>¿Cómo inicio el proceso?</h4>
-            <div class="acc-toggle">+</div>
-          </div>
-          <div class="acc-body"><div>
-            <p class="muted">Comenzamos con una <strong>entrevista de admisión</strong> para
-              conocernos y evaluar necesidades. Luego definimos el plan de trabajo
-              más adecuado y te guío paso a paso para que sea simple y claro.</p>
-          </div></div>
+      <div>
+        <h4>Contacto</h4>
+        <div style="display:grid;gap:6px">
+          <span>Argentina · atención online</span>
+          <a href="mailto:comunicar.terapiadelenguaje@gmail.com">comunicar.terapiadelenguaje@gmail.com</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Contacto</div>
-        <h2 class="title">¿Agendamos una consulta?</h2>
-        <p class="muted">Escribime y te respondo con disponibilidad y próximos pasos.</p>
-      </div>
-
-      <div class="card">
-        <p class="muted" style="margin:.2rem 0 1rem">Podés enviarme un email con el asunto
-          <strong>“Consulta Lenguaje Infantil”</strong> y contarme brevemente tu necesidad.</p>
-        <a class="btn" href="mailto:contacto@ejemplo.com?subject=Consulta%20Lenguaje%20Infantil">contacto@ejemplo.com</a>
-        <span style="display:inline-block;margin-left:1rem" class="muted">· También por WhatsApp si lo preferís.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="wrap foot">
-      <div class="foot-grid">
-        <div>
-          <h3 class="title" style="margin:0 0 .4rem">Lenguaje Infantil</h3>
-          <p>Psicología infantil con foco en desarrollo y comunicación.</p>
-          <small>© <span id="y"></span> · Todos los derechos reservados</small>
-        </div>
-        <div>
-          <h4>Secciones</h4>
-          <p><a href="#enfoque">Enfoque</a> · <a href="#servicios">Servicios</a> · <a href="#beneficios">Quiero ayudarte</a> · <a href="#faq">Preguntas</a></p>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <p><a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></p>
-        </div>
-      </div>
+    <div class="container legal">
+      <small>© <span id="y"></span> Lenguaje Infantil</small>
+      <small><a href="#inicio">Volver arriba</a></small>
     </div>
   </footer>
 
   <script>
-    // Año footer
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Menú móvil
-    const btn = document.getElementById('menuBtn');
-    const mnav = document.getElementById('mobileNav');
-    btn?.addEventListener('click', ()=> mnav.classList.toggle('open'));
-
-    // Acordeón
-    document.querySelectorAll('.acc-item').forEach(item=>{
-      const head = item.querySelector('.acc-head');
-      const toggle = item.querySelector('.acc-toggle');
-      const click = ()=>{ item.classList.toggle('open'); toggle.textContent = item.classList.contains('open') ? '–' : '+'; };
-      head.addEventListener('click', click);
-      head.addEventListener('keypress', (e)=>{ if(e.key==='Enter' || e.key===' ') click(); });
+    document.addEventListener('click', (e)=>{
+      const a=e.target.closest('a[href^="#"]'); if(!a) return;
+      const el=document.querySelector(a.getAttribute('href')); if(!el) return;
+      e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'});
+      history.pushState(null,'',a.getAttribute('href'));
     });
   </script>
 </body>
 </html>
-
