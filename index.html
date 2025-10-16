@@ -4,189 +4,122 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Lenguaje Infantil · Estimulación del lenguaje</title>
-<meta name="description" content="Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Sesiones adaptadas a cada niño, con mirada clínica, lúdica y basada en evidencia."/>
+<meta name="description" content="Estimulación y desarrollo del lenguaje infantil. Observación psicológica integral, enfoque lúdico y recursos con respaldo científico. Atención presencial.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#fff8f0;
-  --panel:#fff;
-  --ink:#2a2623;
-  --muted:#5e5952;
-  --band:#efe7ff40;
-  --line:#efe7d6;
-  --c1:#9f74ff;  /* violeta suave */
-  --c2:#ff7dc8;  /* rosa */
-  --c3:#ffd36a;  /* amarillo */
-  --c4:#7ad6ff;  /* celeste */
-  --radius:18px;
-  --shadow-s:0 10px 28px rgba(20,10,0,.08);
-  --shadow-m:0 24px 54px rgba(20,10,0,.14);
-  --lh:1.85;    /* interlineado general */
+  --ink:#2b2a27; --muted:#5e5952;
+  --bg:#fff8ef; --panel:#ffffff; --band:#f4ecdf; --line:#efe7d9;
+  --grad1:#7c5cff; --grad2:#ff7bbd;
+  --max:1120px; --narrow:980px; --radius:18px;
+  --shadow-s:0 10px 28px rgba(40,30,10,.10);
+  --shadow-m:0 28px 56px rgba(40,30,10,.16);
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 body{
   font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--bg); color:var(--ink);
-  -webkit-font-smoothing:antialiased;
-  line-height:var(--lh);
+  color:var(--ink); background:var(--bg); -webkit-font-smoothing:antialiased;
 }
+.container{max-width:var(--max); margin:auto; padding:0 22px}
+section{padding:68px 0}
 img{max-width:100%; display:block}
-.container{max-width:1160px; margin:auto; padding:0 22px}
-.narrow{max-width:980px; margin:auto; padding:0 22px}
 
-/* ===== Header ===== */
+/* Header */
 header.top{
   position:sticky; top:0; z-index:40;
-  background:rgba(255,248,240,.88);
-  backdrop-filter:blur(8px);
+  background:rgba(255,248,239,.9); backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);
 }
-.top-row{
-  height:74px; display:flex; align-items:center; justify-content:space-between;
-}
+.top-row{height:74px; display:flex; align-items:center; justify-content:space-between; gap:16px}
 .brand{display:flex; align-items:center; gap:12px}
-.brand .avatar{
-  width:42px; height:42px; border-radius:50%;
-  overflow:hidden; border:1px solid var(--line); background:#fff;
-  box-shadow:var(--shadow-s)
-}
-.brand b{font-weight:900}
-nav.nav{display:flex; gap:22px; align-items:center}
-nav.nav a{font-weight:800; color:#3a332d; text-decoration:none; font-size:.98rem}
-.btn{
+.brand .logo{width:40px; height:40px; border-radius:12px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-s)}
+.brand .name{font-weight:900}
+nav.nav{display:flex; gap:20px; align-items:center; flex-wrap:wrap}
+nav.nav a{color:#342f28; text-decoration:none; font-weight:800}
+.cta{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
-  padding:12px 18px; border-radius:999px; font-weight:900; text-decoration:none;
-  border:1px solid var(--line); background:#fff; color:#2c2722; box-shadow:var(--shadow-s)
+  padding:12px 18px; border-radius:999px; color:#fff; text-decoration:none;
+  font-weight:900; box-shadow:var(--shadow-s);
+  background-image:linear-gradient(90deg,var(--grad1),var(--grad2));
 }
-.btn.grad{border:0; color:#fff; background-image:linear-gradient(90deg,var(--c1),var(--c2))}
-.btn:hover{transform:translateY(-1px); box-shadow:var(--shadow-m)}
 
-/* ===== Hero ===== */
-.hero{display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center; padding:64px 0 24px}
-.eyebrow{font-weight:900; color:#6b21a8; letter-spacing:.12em; text-transform:uppercase; font-size:.86rem}
-h1{font:900 clamp(34px,5.8vw,64px)/1.06 Inter; margin:6px 0 12px}
+/* Hero */
+.hero{display:grid; grid-template-columns:1.02fr .98fr; gap:48px; align-items:center; padding:78px 0}
+.eyebrow{font-weight:900; letter-spacing:.12em; text-transform:uppercase; color:#6d44ff; font-size:.86rem}
+h1{font:900 clamp(32px,5.6vw,58px)/1.05 Inter; margin:6px 0 10px}
 .lede{color:var(--muted); max-width:70ch}
-.actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
-.photo{
-  position:relative; display:grid; place-items:center;
-  padding:18px; border-radius:34px;
-  background:radial-gradient(60% 60% at 50% 20%, #efe4ff, transparent 70%), #fff;
-  box-shadow:var(--shadow-m);
+.actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+.btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; text-decoration:none; font-weight:900}
+.btn-ghost{background:#fff; border:1px solid var(--line); color:#2f2a24; padding:12px 18px; box-shadow:var(--shadow-s)}
+.btn-grad{background-image:linear-gradient(90deg,var(--grad1),var(--grad2)); color:#fff; padding:12px 22px; box-shadow:var(--shadow-s)}
+.photo{position:relative}
+.figure{
+  width:min(540px,92%); aspect-ratio:1/1; border-radius:28px;
+  background:#efe7ff; box-shadow:0 20px 44px rgba(124,92,255,.18)
 }
-.portrait{width:min(640px,96%); filter:drop-shadow(0 28px 46px rgba(0,0,0,.18))}
-.ribbon{
-  position:absolute; inset:0; pointer-events:none; z-index:0;
-  background:
-   radial-gradient(50px 140px at 84% 0%, #e7d6ff 0, transparent 70%),
-   radial-gradient(40px 120px at 4% 6%, #ffe4f3 0, transparent 70%);
-  border-radius:30px;
+.portrait{
+  position:absolute; bottom:-10px; right:0; width:min(640px,96%);
+  filter:drop-shadow(0 26px 46px rgba(0,0,0,.18))
 }
 
-/* ===== Band “Qué incluyen…” ===== */
-.band{background:#f6efe6; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+/* Band box */
+.band{background:var(--band); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
 .box{
-  background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px 18px;
-  box-shadow:var(--shadow-s)
-}
-.box h2{margin:0 0 10px}
-ul.clean{margin:0; padding-left:22px}
-
-/* ===== Cards “Mi enfoque” ===== */
-.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-@media (max-width:960px){ .grid-3{grid-template-columns:1fr} }
-.card{
-  background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px;
-  box-shadow:var(--shadow-s)
-}
-.tag{
-  display:inline-block; font-size:.78rem; font-weight:800; color:#6b21a8;
-  padding:6px 10px; background:#f3e8ff; border-radius:999px
-}
-.card h3{margin:8px 0 6px}
-
-/* ===== Galería ===== */
-.gallery{display:grid; grid-template-columns:1.2fr .8fr; gap:18px; align-items:stretch}
-@media (max-width:960px){ .gallery{grid-template-columns:1fr; } }
-.gallery .big{
-  height:520px; border-radius:18px; overflow:hidden; box-shadow:var(--shadow-m);
-}
-.gallery .big img{width:100%; height:100%; object-fit:cover}
-.gallery .col{
-  display:flex; flex-direction:column; gap:18px; justify-content:center;
-}
-.gallery .col .ph{
-  height:240px; border-radius:18px; overflow:hidden; box-shadow:var(--shadow-m);
-  display:flex; align-items:center; justify-content:center; background:#fff;
-}
-.gallery .col .ph img{width:100%; height:100%; object-fit:cover; object-position:center}
-
-/* --- Confetti serpentina (sólo en esta sección) --- */
-.confetti{
-  position:relative;
-}
-.confetti::before{
-  content:"";
-  position:absolute; inset:-40px -10px -40px auto; width:140px; z-index:0;
-  background:
-    radial-gradient(12px 38px at 40% 0, var(--c3) 0 60%, transparent 62%),
-    radial-gradient(12px 38px at 70% 0, var(--c4) 0 60%, transparent 62%),
-    radial-gradient(12px 38px at 30% 30%, var(--c2) 0 60%, transparent 62%),
-    radial-gradient(12px 38px at 80% 34%, #b4f59b 0 60%, transparent 62%);
-  opacity:.70; filter:blur(.2px);
-  animation:floatY 7s linear infinite;
-}
-.confetti::after{
-  content:"";
-  position:absolute; inset:auto -10px -26px auto; width:140px; height:220px; z-index:0;
-  background:
-    radial-gradient(12px 38px at 20% 10%, var(--c2) 0 60%, transparent 62%),
-    radial-gradient(12px 38px at 60% 0, var(--c1) 0 60%, transparent 62%),
-    radial-gradient(12px 38px at 78% 40%, var(--c3) 0 60%, transparent 62%),
-    radial-gradient(12px 38px at 10% 70%, var(--c4) 0 60%, transparent 62%);
-  opacity:.65;
-  animation:floatY 9s linear infinite reverse;
-}
-@keyframes floatY{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-  100%{transform:translateY(0)}
+  background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-s);
+  padding:18px
 }
 
-/* ===== FAQ ===== */
-.faq-band{background:#f6efe6; padding:28px 0}
-.faq{max-width:980px; margin:0 auto; padding:0 22px}
-.acc{background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:var(--shadow-s)}
-.acc details{border-top:1px solid var(--line)}
-.acc details:first-child{border-top:0}
-.acc summary{
-  list-style:none; display:flex; align-items:center; justify-content:space-between;
-  padding:18px; cursor:pointer; font-weight:900;
-}
-.acc summary::after{
-  content:"+"; width:26px; height:26px; border-radius:999px;
-  display:grid; place-items:center; background:#f1e8ff; color:#5b21b6; font-weight:900;
-}
-.acc details[open] summary::after{content:"–"}
-.acc .content{padding:0 18px 18px; color:#3a332d}
+/* List & cards */
+.ul{margin:0; padding:0 0 0 1.1rem}
+.grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
+.card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow-s)}
+.card h3{margin:6px 0 6px}
+.tag{display:inline-block; font-size:.78rem; font-weight:800; padding:6px 10px; border-radius:999px; background:#efe7ff; color:#5a3eff}
 
-/* ===== Footer ===== */
-footer{background:#fff; border-top:1px solid var(--line); margin-top:36px}
+/* Process */
+.proc{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
+.proc .step{background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:var(--shadow-s)}
+
+/* Gallery */
+.gallery{display:grid; grid-template-columns:1.25fr .75fr; gap:24px}
+.g-main figure{border-radius:18px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-m)}
+.g-aside{display:grid; gap:22px}
+.g-aside figure{
+  border-radius:18px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-s);
+  display:flex; align-items:center; justify-content:center;   /* centra vertical y horizontal */
+  min-height:240px;                                          /* alto cómodo para centrar */
+}
+.g-aside img{
+  max-width:100%; max-height:100%;
+  object-fit:contain; object-position:center;                /* asegura centrado real */
+}
+
+/* FAQ simple */
+.faq{display:grid; gap:10px}
+details.faqi{background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow-s); overflow:hidden}
+details.faqi summary{
+  list-style:none; cursor:pointer; padding:16px; font-weight:900; display:flex; justify-content:space-between; align-items:center
+}
+details.faqi summary::after{content:"+"; font-weight:900; color:#7a62ff}
+details.faqi[open] summary::after{content:"–"}
+.faqi .inner{padding:0 16px 16px; color:var(--muted)}
+
+/* Footer */
+footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 .footer{display:grid; grid-template-columns:2fr 1fr 1fr; gap:22px; padding:28px 0}
 .footer h4{margin:6px 0 8px}
-.footer a{text-decoration:none; color:#3a352e}
-.legal{display:flex; justify-content:space-between; align-items:center; padding:10px 0 24px; color:#6d675f; font-size:.95rem}
+.footer a{text-decoration:none; color:#2e2a26}
+.legal{display:flex; justify-content:space-between; align-items:center; padding:10px 0 24px; color:#6f6a62; font-size:.92rem}
 
-/* utilities */
-h2{font:900 clamp(22px,3.6vw,32px)/1.15 Inter,system-ui; margin:0 0 10px}
-.subtle{color:#59544e}
-.center{display:grid; place-items:center}
-.mt-2{margin-top:12px}
-.mt-3{margin-top:18px}
-.mt-4{margin-top:24px}
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -194,166 +127,169 @@ h2{font:900 clamp(22px,3.6vw,32px)/1.15 Inter,system-ui; margin:0 0 10px}
 <header class="top">
   <div class="container top-row">
     <div class="brand">
-      <span class="avatar"><img src="retrato-perfil.png" alt="Daiana Beltrán"></span>
-      <b>Lenguaje Infantil</b>
+      <span class="logo"><img src="retrato-perfil.png" alt="Daiana Beltrán" width="40" height="40"></span>
+      <div class="name">Lenguaje Infantil</div>
     </div>
     <nav class="nav" aria-label="principal">
-      <a href="#incluye">Sesiones</a>
-      <a href="#enfoque">Quiero ayudarte</a>
+      <a href="#que">Qué incluyo</a>
+      <a href="#ayuda">Enfoque</a>
       <a href="#proceso">Proceso</a>
-      <a href="#ambiente">Galería</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#ambiente">Ambiente</a>
+      <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
+         target="_blank" rel="noopener">Reservar por WhatsApp</a>
     </nav>
   </div>
 </header>
 
 <section class="container hero" id="inicio">
   <div>
-    <div class="eyebrow">Psicología infantil</div>
-    <h1>Desarrollo y<br>estimulación del<br>lenguaje</h1>
+    <div class="eyebrow">Psicología infantil · lenguaje</div>
+    <h1>Desarrollo y estimulación del lenguaje</h1>
     <p class="lede">
       Realizo <strong>observación psicológica integral</strong> y diseño sesiones
-      <strong>adaptadas a cada niño</strong>. Integro la vivencia <strong>socioemocional</strong> con
-      <strong>lenguaje, habla y aprendizaje</strong> mediante <strong>juego terapéutico</strong> y estrategias con
-      <strong>respaldo científico</strong>, para una comunicación clara y funcional.
+      <strong>adaptadas a cada niño</strong>. Integro la vivencia
+      <strong>socioemocional</strong> con <strong>lenguaje, habla y aprendizaje</strong>
+      a través del <strong>juego terapéutico</strong> y estrategias con
+      <strong>respaldo científico</strong>, para que la comunicación sea clara y funcional.
     </p>
     <div class="actions">
-      <a class="btn grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesión%20de%20estimulación%20del%20lenguaje."
+      <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
          target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      <a class="btn" href="#incluye">Ver qué incluyo</a>
+      <a class="btn btn-ghost" href="#que">Ver qué incluyo</a>
     </div>
   </div>
-
   <div class="photo" aria-hidden="true">
-    <div class="ribbon"></div>
+    <div class="figure"></div>
     <img class="portrait" src="retrato-perfil.png" alt="">
   </div>
 </section>
 
-<div class="band" id="incluye">
-  <section class="container mt-3">
+<div class="band" id="que">
+  <section class="container">
     <h2>¿Qué incluyen las sesiones de estimulación del lenguaje?</h2>
     <div class="box">
-      <ul class="clean">
+      <ul class="ul">
         <li><strong>Observación y línea base</strong> (perfil de fortalezas y necesidades).</li>
         <li><strong>Plan individual</strong> con metas claras y medibles.</li>
         <li><strong>Intervenciones lúdicas y progresivas</strong> con recursos visuales y auditivos.</li>
-        <li><strong>Coordinación con la familia</strong> y, cuando hace falta, con escuela u otros referentes.</li>
+        <li><strong>Coordinación con la familia y escuela</strong> cuando hace falta.</li>
       </ul>
     </div>
   </section>
 </div>
 
-<section class="container mt-4" id="enfoque">
+<section class="container" id="ayuda">
   <h2>Mi enfoque</h2>
   <div class="grid-3">
     <article class="card">
       <span class="tag">Comunicación</span>
       <h3>Lenguaje y habla</h3>
-      <p>Favorezco comprensión y expresión verbal (vocabulario, construcción de frases, turnos de palabra y claridad al hablar).</p>
+      <p>Favorezco comprensión y expresión verbal: vocabulario, construcción de frases, turnos de palabra y claridad al hablar.</p>
     </article>
-
     <article class="card">
       <span class="tag">Aprendizaje</span>
       <h3>Funciones que sostienen el lenguaje</h3>
-      <p>Atención, memoria de trabajo, secuenciación y juego simbólico con actividades significativas.</p>
+      <p>Atención, memoria de trabajo, secuenciación y juego simbólico, siempre desde actividades significativas.</p>
     </article>
-
     <article class="card">
       <span class="tag">Socioemocional</span>
       <h3>Habilidades sociales</h3>
-      <p>Regulación emocional, pedir/aceptar ayuda y comunicación funcional en juego compartido y rutinas.</p>
+      <p>Regulación emocional, pedir/aceptar ayuda y comunicación funcional en juego compartido y vida cotidiana.</p>
     </article>
   </div>
 </section>
 
-<section class="container mt-4 confetti" id="proceso">
-  <h2>¿Cómo inicio el proceso?</h2>
-  <div class="grid-3">
-    <article class="card">
-      <h3>1) Entrevista de admisión</h3>
-      <p>Nos conocemos, relevamos historia y definimos preocupaciones y objetivos.</p>
-    </article>
-    <article class="card">
+<section class="container" id="proceso">
+  <h2>¿Cómo es el proceso?</h2>
+  <div class="proc">
+    <div class="step">
+      <h3>1) Entrevista inicial</h3>
+      <p>Conversamos antecedentes, preocupaciones y objetivos. Acordamos prioridades y modo de trabajo.</p>
+    </div>
+    <div class="step">
       <h3>2) Observación psicológica integral</h3>
-      <p>Observación clínica según la edad y contexto. Elaboro un plan de trabajo claro, realista y medible.</p>
-    </article>
-    <article class="card">
+      <p>Registro clínico mediante juego y situaciones dirigidas. Elaboro un plan con metas concretas y observables.</p>
+    </div>
+    <div class="step">
       <h3>3) Intervención y acompañamiento</h3>
-      <p>Sesiones lúdicas, ajustes periódicos y estrategias simples para sostener los avances.</p>
-    </article>
+      <p>Sesiones lúdicas, ajustes periódicos y orientaciones claras para sostener los avances.</p>
+    </div>
+  </div>
+  <div class="actions" style="margin-top:14px">
+    <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20%C2%BFten%C3%A9s%20disponibilidad%20para%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil%3F"
+       target="_blank" rel="noopener">Consultar disponibilidad</a>
   </div>
 </section>
 
-<section class="container mt-4 confetti" id="ambiente">
+<section class="container" id="ambiente">
   <h2>Ambiente & materiales</h2>
   <div class="gallery">
-    <figure class="big"><img src="infantil2.jpg" alt="Consultorio de estimulación del lenguaje"></figure>
-    <div class="col">
-      <div class="ph"><img src="infantil1.jpg" alt="Espacio lúdico"></div>
-      <div class="ph"><img src="infantil3.jpg" alt="Materiales de juego"></div>
+    <div class="g-main">
+      <figure><img src="infantil2.jpg" alt="Espacio principal de trabajo"></figure>
+    </div>
+    <div class="g-aside">
+      <figure><img src="infantil1.jpg" alt="Materiales lúdicos"></figure>
+      <figure><img src="infantil3.jpg" alt="Área de juego y mesa"></figure>
     </div>
   </div>
 </section>
 
-<section id="faq" class="faq-band mt-4">
+<section class="container" id="faq">
+  <h2>Preguntas frecuentes</h2>
   <div class="faq">
-    <h2 style="text-align:center;margin-bottom:8px">Preguntas frecuentes</h2>
-    <div class="acc">
-      <details open>
-        <summary>¿Qué incluyen nuestras terapias?</summary>
-        <div class="content">
-          Evaluación de inicio (observación y línea base), plan individual, sesiones lúdicas
-          con respaldo científico y coordinación con la familia cuando es necesario.
-        </div>
-      </details>
+    <details class="faqi" open>
+      <summary>¿Qué incluyen las sesiones?</summary>
+      <div class="inner">
+        Observación inicial, plan individual con objetivos, intervenciones lúdicas y seguimiento.
+        Cuando es útil, coordino con escuela y profesionales involucrados.
+      </div>
+    </details>
 
-      <details>
-        <summary>¿Mi hijo puede mejorar sus habilidades sociales?</summary>
-        <div class="content">
-          Sí. Parte esencial del trabajo se centra en habilidades socioemocionales y
-          comunicativas: turnos de palabra, contacto visual, juego compartido y pedir/aceptar ayuda.
-        </div>
-      </details>
-
-      <details>
-        <summary>¿Cómo reservo un turno?</summary>
-        <div class="content">
-          Escribime por WhatsApp para ver disponibilidad y coordinar día y horario.  
-          <a class="btn grad mt-2" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20coordinar%20un%20turno%20para%20estimulación%20del%20lenguaje."
+    <details class="faqi">
+      <summary>¿Cómo reservo y coordino el horario?</summary>
+      <div class="inner">
+        Escribime por WhatsApp con tu disponibilidad. Reservo el turno con una
+        <strong>seña de $10.000</strong>. Si necesitás reprogramar, avisá con
+        <strong>48 h</strong> de antelación; con menos aviso, la seña se pierde.
+        <div style="margin-top:10px">
+          <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quiero%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
              target="_blank" rel="noopener">Reservar por WhatsApp</a>
         </div>
-      </details>
-    </div>
+      </div>
+    </details>
+
+    <details class="faqi">
+      <summary>Duración y frecuencia</summary>
+      <div class="inner">
+        Las sesiones son de <strong>40 minutos</strong>. La frecuencia se define según objetivos y ritmo del niño; lo revisamos juntas/os en el proceso.
+      </div>
+    </details>
   </div>
 </section>
 
-<footer id="contacto">
+<footer>
   <div class="container footer">
     <div>
-      <strong style="display:block; font-size:1.08rem; margin-bottom:6px">Lenguaje Infantil</strong>
-      <p class="subtle" style="margin:6px 0 12px">
-        Psicología infantil enfocada en desarrollo y estimulación del lenguaje.  
-        Mirada clínica y lúdica.
-      </p>
+      <strong>Lenguaje Infantil</strong>
+      <p class="muted">Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Mirada clínica y lúdica.</p>
       <div style="display:flex; gap:10px; flex-wrap:wrap">
-        <a class="btn" href="#enfoque">Quiero ayudarte</a>
-        <a class="btn grad" href="https://wa.me/5492996044900" target="_blank" rel="noopener">Escribime un e-mail / WhatsApp</a>
+        <a class="btn btn-ghost" href="#ayuda">Enfoque</a>
+        <a class="cta" href="https://wa.me/5492996044900" target="_blank" rel="noopener">Escribime por WhatsApp</a>
       </div>
     </div>
     <div>
       <h4>Secciones</h4>
       <div style="display:grid; gap:6px">
-        <a href="#incluye">Sesiones</a>
-        <a href="#enfoque">Quiero ayudarte</a>
+        <a href="#que">Qué incluyo</a>
         <a href="#proceso">Proceso</a>
-        <a href="#ambiente">Galería</a>
+        <a href="#ambiente">Ambiente</a>
+        <a href="#faq">Preguntas</a>
       </div>
     </div>
     <div>
       <h4>Contacto</h4>
       <div style="display:grid; gap:6px">
-        <span>Argentina · atención presencial/online</span>
+        <span>Argentina · atención presencial</span>
         <a href="mailto:comunicar.terapiadelenguaje@gmail.com">comunicar.terapiadelenguaje@gmail.com</a>
         <a href="https://wa.me/5492996044900" target="_blank" rel="noopener">WhatsApp directo</a>
       </div>
@@ -366,27 +302,19 @@ h2{font:900 clamp(22px,3.6vw,32px)/1.15 Inter,system-ui; margin:0 0 10px}
 </footer>
 
 <script>
-  // Año dinámico
-  document.getElementById('y').textContent = new Date().getFullYear();
-
-  // Scroll suave interno
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest('a[href^="#"]'); if(!a) return;
-    const el = document.querySelector(a.getAttribute('href')); if(!el) return;
-    e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'});
-    history.pushState(null,'',a.getAttribute('href'));
-  });
-
-  // FAQ: una abierta por vez
-  (function(){
-    const acc = document.querySelector('.acc'); if(!acc) return;
-    acc.addEventListener('toggle', (ev)=>{
-      const d = ev.target;
-      if(d.tagName!=='DETAILS' || !d.open) return;
-      acc.querySelectorAll('details[open]').forEach(x=>{ if(x!==d) x.open=false; });
-    }, true);
-  })();
+// año dinámico
+document.getElementById('y').textContent = new Date().getFullYear();
+// scroll suave
+document.addEventListener('click', (e)=>{
+  const a = e.target.closest('a[href^="#"]'); if(!a) return;
+  const el = document.querySelector(a.getAttribute('href'));
+  if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+});
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
