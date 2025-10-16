@@ -1,297 +1,285 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lenguaje Infantil · Estimulación del lenguaje</title>
-<meta name="description" content="Estimulación y desarrollo del lenguaje infantil. Observación psicológica integral, enfoque lúdico y recursos con respaldo científico. Atención presencial.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lenguaje Infantil – Estimulación del lenguaje</title>
+<meta name="description" content="Estimulación del lenguaje con mirada psicológica infantil. Observación integral, sesiones lúdicas y recursos con respaldo científico. Atención presencial — reservar por WhatsApp.">
+<link rel="canonical" href="https://daiana-psicologa.github.io/lenguaje-infantil/">
 
+<!-- Fuente -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+/* ====== Base ====== */
 :root{
-  --ink:#2b2a27; --muted:#5e5952;
-  --bg:#fff8ef; --panel:#ffffff; --band:#f4ecdf; --line:#efe7d9;
+  --ink:#2a2723; --muted:#5f5850;
+  --bg:#fff9f0; --panel:#fff;
+  --band:#efe6d6; --line:#eadfcd;
   --grad1:#7c5cff; --grad2:#ff7bbd;
-  --max:1120px; --narrow:980px; --radius:18px;
-  --shadow-s:0 10px 28px rgba(40,30,10,.10);
-  --shadow-m:0 28px 56px rgba(40,30,10,.16);
+  --cta1:#7c5cff; --cta2:#ff7bbd;
+  --radius:18px; --shadow:0 18px 40px rgba(60,40,20,.12);
+  --max:1120px; --narrow:980px;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 body{
   font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-  color:var(--ink); background:var(--bg); -webkit-font-smoothing:antialiased;
+  background:var(--bg); color:var(--ink);
+  line-height:1.75; -webkit-font-smoothing:antialiased;
 }
-.container{max-width:var(--max); margin:auto; padding:0 22px}
-section{padding:68px 0}
-img{max-width:100%; display:block}
+img{max-width:100%;display:block}
+p{margin:.85rem 0}
+.container{max-width:var(--max);margin:auto;padding:0 22px}
+section{padding:64px 0}
 
-/* Header */
-header.top{
-  position:sticky; top:0; z-index:40;
-  background:rgba(255,248,239,.9); backdrop-filter:blur(8px);
+/* ====== Header simple ====== */
+header{
+  position:sticky; top:0; z-index:20;
+  background:rgba(255,249,240,.9); backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);
 }
-.top-row{height:74px; display:flex; align-items:center; justify-content:space-between; gap:16px}
-.brand{display:flex; align-items:center; gap:12px}
-.brand .logo{width:40px; height:40px; border-radius:12px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-s)}
-.brand .name{font-weight:900}
-nav.nav{display:flex; gap:20px; align-items:center; flex-wrap:wrap}
-nav.nav a{color:#342f28; text-decoration:none; font-weight:800}
-.cta{
-  display:inline-flex; align-items:center; justify-content:center; gap:8px;
-  padding:12px 18px; border-radius:999px; color:#fff; text-decoration:none;
-  font-weight:900; box-shadow:var(--shadow-s);
+.top{height:70px; display:flex; align-items:center; justify-content:space-between}
+.brand{display:flex; align-items:center; gap:10px; font-weight:900}
+.brand img{height:34px; width:34px; border-radius:50%; object-fit:cover; box-shadow:0 4px 16px rgba(0,0,0,.12)}
+
+/* ====== Botones ====== */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  text-decoration:none; font-weight:900; border-radius:999px; border:1px solid var(--line);
+  padding:12px 18px; box-shadow:0 8px 24px rgba(60,40,20,.08); transition:.15s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-ghost{background:#fff}
+.btn-grad{
+  color:#fff; border:none;
   background-image:linear-gradient(90deg,var(--grad1),var(--grad2));
 }
 
-/* Hero */
-.hero{display:grid; grid-template-columns:1.02fr .98fr; gap:48px; align-items:center; padding:78px 0}
-.eyebrow{font-weight:900; letter-spacing:.12em; text-transform:uppercase; color:#6d44ff; font-size:.86rem}
-h1{font:900 clamp(32px,5.6vw,58px)/1.05 Inter; margin:6px 0 10px}
-.lede{color:var(--muted); max-width:70ch}
+/* ====== HERO ====== */
+.hero{display:grid; grid-template-columns:1.02fr .98fr; gap:48px; align-items:center; padding:74px 0}
+h1{font:900 clamp(34px,5.4vw,62px)/1.07 Inter; margin:0 0 .4rem}
+.eyebrow{font-weight:900;color:#7c5cff;letter-spacing:.12em;text-transform:uppercase;font-size:.86rem;margin-bottom:8px}
+.lede{color:var(--muted)}
 .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
-.btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; text-decoration:none; font-weight:900}
-.btn-ghost{background:#fff; border:1px solid var(--line); color:#2f2a24; padding:12px 18px; box-shadow:var(--shadow-s)}
-.btn-grad{background-image:linear-gradient(90deg,var(--grad1),var(--grad2)); color:#fff; padding:12px 22px; box-shadow:var(--shadow-s)}
-.photo{position:relative}
+
+.photo{position:relative; display:grid; place-items:center}
 .figure{
-  width:min(540px,92%); aspect-ratio:1/1; border-radius:28px;
-  background:#efe7ff; box-shadow:0 20px 44px rgba(124,92,255,.18)
+  width:min(560px,92%); aspect-ratio:1/1;
+  border-radius:28px; background:radial-gradient(60% 70% at 50% 30%, #e9ddff 0%, #f6e9ff 40%, #fff 100%);
+  box-shadow:0 30px 60px rgba(124,92,255,.14);
 }
 .portrait{
-  position:absolute; bottom:-10px; right:0; width:min(640px,96%);
-  filter:drop-shadow(0 26px 46px rgba(0,0,0,.18))
+  position:absolute; bottom:-10px; right:4%;
+  width:min(640px,96%); filter:drop-shadow(0 26px 46px rgba(0,0,0,.18));
 }
 
-/* Band box */
+/* --- Serpentinas suaves opcionales --- */
+.ribbons{ position:absolute; inset:-18px -18px auto auto; width:220px; height:260px; pointer-events:none; z-index:1 }
+.ribbons span{ position:absolute; top:0; width:12px; height:190px; border-radius:999px; opacity:.22; filter:blur(.2px);
+  animation:floatY 12s ease-in-out infinite alternate; transform-origin:50% 0;
+  background:linear-gradient(180deg,#7c5cff 0%, #8e7bff 26%, #ff7bbd 60%, #ffd0e8 100%);
+}
+.ribbons .b{ left:58px; height:210px; width:10px; opacity:.20; animation-duration:14s; animation-delay:.8s;
+  background:linear-gradient(180deg,#ff7bbd 0%, #ffa5d2 36%, #7c5cff 70%, #c9c2ff 100%);}
+.ribbons .c{ left:120px; height:180px; width:12px; opacity:.18; animation-duration:16s; animation-delay:1.6s;
+  background:linear-gradient(180deg,#ffd26a 0%, #ffb89b 30%, #7c5cff 78%, #b9b1ff 100%);}
+@keyframes floatY{0%{transform:rotate(8deg) translateY(-8px)}50%{transform:rotate(-6deg) translateY(6px)}100%{transform:rotate(10deg) translateY(14px)}}
+@media (prefers-reduced-motion:reduce){ .ribbons span{ animation:none } }
+@media (max-width:720px){ .ribbons{ display:none } }
+
+/* ====== Band/Qué incluyo ====== */
 .band{background:var(--band); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
 .box{
-  background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-s);
-  padding:18px
+  background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px 20px;
+  box-shadow:var(--shadow); max-width:var(--narrow); margin:0 auto;
 }
 
-/* List & cards */
-.ul{margin:0; padding:0 0 0 1.1rem}
-.grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
-.card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow-s)}
-.card h3{margin:6px 0 6px}
-.tag{display:inline-block; font-size:.78rem; font-weight:800; padding:6px 10px; border-radius:999px; background:#efe7ff; color:#5a3eff}
-
-/* Process */
-.proc{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
-.proc .step{background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:var(--shadow-s)}
-
-/* Gallery */
-.gallery{display:grid; grid-template-columns:1.25fr .75fr; gap:24px}
-.g-main figure{border-radius:18px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-m)}
-.g-aside{display:grid; gap:22px}
-.g-aside figure{
-  border-radius:18px; overflow:hidden; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-s);
-  display:flex; align-items:center; justify-content:center;   /* centra vertical y horizontal */
-  min-height:240px;                                          /* alto cómodo para centrar */
+/* ====== Mi enfoque (tarjetas) ====== */
+.grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px}
+.card{
+  background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px;
+  box-shadow:0 12px 28px rgba(60,40,20,.08);
 }
-.g-aside img{
-  max-width:100%; max-height:100%;
-  object-fit:contain; object-position:center;                /* asegura centrado real */
+.badge{
+  display:inline-block; padding:6px 10px; border-radius:999px; font:800 12px/1 Inter;
+  background:#efe7ff; color:#4d3ad6; border:1px solid #e4ddff;
 }
 
-/* FAQ simple */
-.faq{display:grid; gap:10px}
-details.faqi{background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow-s); overflow:hidden}
-details.faqi summary{
-  list-style:none; cursor:pointer; padding:16px; font-weight:900; display:flex; justify-content:space-between; align-items:center
+/* ====== Proceso ====== */
+.steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px}
+.step{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:0 10px 26px rgba(60,40,20,.08)}
+.step h3{margin:.2rem 0 .4rem}
+
+/* ====== Galería ====== */
+.gallery{display:grid; grid-template-columns:1.35fr .65fr; gap:18px; align-items:start}
+.big{
+  background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:var(--shadow)
 }
-details.faqi summary::after{content:"+"; font-weight:900; color:#7a62ff}
-details.faqi[open] summary::after{content:"–"}
-.faqi .inner{padding:0 16px 16px; color:var(--muted)}
+.big img{ width:100%; height:560px; object-fit:cover; object-position:center }
+.side{ display:grid; gap:18px }
+.side figure{
+  display:grid; place-items:center;
+  background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; height:270px;
+  box-shadow:var(--shadow);
+}
+.side figure img{ width:100%; height:100%; object-fit:cover; object-position:center }
 
-/* Footer */
-footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
-.footer{display:grid; grid-template-columns:2fr 1fr 1fr; gap:22px; padding:28px 0}
-.footer h4{margin:6px 0 8px}
-.footer a{text-decoration:none; color:#2e2a26}
-.legal{display:flex; justify-content:space-between; align-items:center; padding:10px 0 24px; color:#6f6a62; font-size:.92rem}
+/* ====== Footer ====== */
+footer{background:#fff; border-top:1px solid var(--line); margin-top:34px}
+.footer{display:grid; grid-template-columns:2fr 1fr 1fr; gap:22px; padding:26px 0}
+.footer a{color:inherit; text-decoration:none; font-weight:700}
+.legal{display:flex; justify-content:space-between; align-items:center; padding:12px 0 24px; color:var(--muted)}
 
+/* ====== Responsive ====== */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
+  .big img{height:420px}
 }
 </style>
 </head>
 <body>
 
-<header class="top">
-  <div class="container top-row">
+<header>
+  <div class="container top">
     <div class="brand">
-      <span class="logo"><img src="retrato-perfil.png" alt="Daiana Beltrán" width="40" height="40"></span>
-      <div class="name">Lenguaje Infantil</div>
+      <img src="retrato-perfil.png" alt="Daiana – Lenguaje Infantil">
+      Lenguaje Infantil
     </div>
-    <nav class="nav" aria-label="principal">
-      <a href="#que">Qué incluyo</a>
-      <a href="#ayuda">Enfoque</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#ambiente">Ambiente</a>
-      <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
-         target="_blank" rel="noopener">Reservar por WhatsApp</a>
-    </nav>
+    <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%2C%20quisiera%20reservar%20una%20sesión%20de%20estimulación%20del%20lenguaje." target="_blank" rel="noopener">Reservar por WhatsApp</a>
   </div>
 </header>
 
-<section class="container hero" id="inicio">
-  <div>
-    <div class="eyebrow">Psicología infantil · lenguaje</div>
-    <h1>Desarrollo y estimulación del lenguaje</h1>
-    <p class="lede">
-      Realizo <strong>observación psicológica integral</strong> y diseño sesiones
-      <strong>adaptadas a cada niño</strong>. Integro la vivencia
-      <strong>socioemocional</strong> con <strong>lenguaje, habla y aprendizaje</strong>
-      a través del <strong>juego terapéutico</strong> y estrategias con
-      <strong>respaldo científico</strong>, para que la comunicación sea clara y funcional.
-    </p>
-    <div class="actions">
-      <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quisiera%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
-         target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      <a class="btn btn-ghost" href="#que">Ver qué incluyo</a>
+<main>
+  <!-- HERO -->
+  <section class="container hero" id="inicio">
+    <div>
+      <div class="eyebrow">Psicología infantil</div>
+      <h1>Desarrollo y estimulación del lenguaje</h1>
+      <p class="lede">
+        Realizo <strong>observación psicológica integral</strong> y diseño sesiones <strong>adaptadas a cada niño</strong>.
+        Integro la vivencia <strong>socioemocional</strong> con <strong>lenguaje, habla y aprendizaje</strong>
+        mediante <strong>juego terapéutico</strong> y estrategias con <strong>respaldo científico</strong>,
+        para que la comunicación sea clara y funcional.
+      </p>
+      <div class="actions">
+        <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana%2C%20quiero%20reservar%20mi%20sesión%20presencial%20de%20lenguaje." target="_blank" rel="noopener">Reservar por WhatsApp</a>
+        <a class="btn btn-ghost" href="#incluyo">Ver qué incluyo</a>
+      </div>
     </div>
-  </div>
-  <div class="photo" aria-hidden="true">
-    <div class="figure"></div>
-    <img class="portrait" src="retrato-perfil.png" alt="">
-  </div>
-</section>
 
-<div class="band" id="que">
-  <section class="container">
-    <h2>¿Qué incluyen las sesiones de estimulación del lenguaje?</h2>
-    <div class="box">
-      <ul class="ul">
-        <li><strong>Observación y línea base</strong> (perfil de fortalezas y necesidades).</li>
-        <li><strong>Plan individual</strong> con metas claras y medibles.</li>
-        <li><strong>Intervenciones lúdicas y progresivas</strong> con recursos visuales y auditivos.</li>
-        <li><strong>Coordinación con la familia y escuela</strong> cuando hace falta.</li>
-      </ul>
+    <div class="photo" aria-hidden="true">
+      <div class="figure"></div>
+      <img class="portrait" src="retrato-perfil.png" alt="">
+      <!-- serpentinas sutiles (opcionales) -->
+      <div class="ribbons" aria-hidden="true">
+        <span></span><span class="b"></span><span class="c"></span>
+      </div>
     </div>
   </section>
-</div>
 
-<section class="container" id="ayuda">
-  <h2>Mi enfoque</h2>
-  <div class="grid-3">
-    <article class="card">
-      <span class="tag">Comunicación</span>
-      <h3>Lenguaje y habla</h3>
-      <p>Favorezco comprensión y expresión verbal: vocabulario, construcción de frases, turnos de palabra y claridad al hablar.</p>
-    </article>
-    <article class="card">
-      <span class="tag">Aprendizaje</span>
-      <h3>Funciones que sostienen el lenguaje</h3>
-      <p>Atención, memoria de trabajo, secuenciación y juego simbólico, siempre desde actividades significativas.</p>
-    </article>
-    <article class="card">
-      <span class="tag">Socioemocional</span>
-      <h3>Habilidades sociales</h3>
-      <p>Regulación emocional, pedir/aceptar ayuda y comunicación funcional en juego compartido y vida cotidiana.</p>
-    </article>
-  </div>
-</section>
-
-<section class="container" id="proceso">
-  <h2>¿Cómo es el proceso?</h2>
-  <div class="proc">
-    <div class="step">
-      <h3>1) Entrevista inicial</h3>
-      <p>Conversamos antecedentes, preocupaciones y objetivos. Acordamos prioridades y modo de trabajo.</p>
-    </div>
-    <div class="step">
-      <h3>2) Observación psicológica integral</h3>
-      <p>Registro clínico mediante juego y situaciones dirigidas. Elaboro un plan con metas concretas y observables.</p>
-    </div>
-    <div class="step">
-      <h3>3) Intervención y acompañamiento</h3>
-      <p>Sesiones lúdicas, ajustes periódicos y orientaciones claras para sostener los avances.</p>
-    </div>
-  </div>
-  <div class="actions" style="margin-top:14px">
-    <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20%C2%BFten%C3%A9s%20disponibilidad%20para%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil%3F"
-       target="_blank" rel="noopener">Consultar disponibilidad</a>
-  </div>
-</section>
-
-<section class="container" id="ambiente">
-  <h2>Ambiente & materiales</h2>
-  <div class="gallery">
-    <div class="g-main">
-      <figure><img src="infantil2.jpg" alt="Espacio principal de trabajo"></figure>
-    </div>
-    <div class="g-aside">
-      <figure><img src="infantil1.jpg" alt="Materiales lúdicos"></figure>
-      <figure><img src="infantil3.jpg" alt="Área de juego y mesa"></figure>
-    </div>
-  </div>
-</section>
-
-<section class="container" id="faq">
-  <h2>Preguntas frecuentes</h2>
-  <div class="faq">
-    <details class="faqi" open>
-      <summary>¿Qué incluyen las sesiones?</summary>
-      <div class="inner">
-        Observación inicial, plan individual con objetivos, intervenciones lúdicas y seguimiento.
-        Cuando es útil, coordino con escuela y profesionales involucrados.
+  <!-- QUÉ INCLUYO -->
+  <div class="band" id="incluyo">
+    <section class="container">
+      <h2 style="margin-top:0">¿Qué incluyen las sesiones de estimulación del lenguaje?</h2>
+      <div class="box">
+        <ul style="margin:.4rem 0 0 1rem">
+          <li><strong>Observación y línea base</strong> (perfil de fortalezas y necesidades).</li>
+          <li><strong>Plan individual</strong> con metas claras y medibles.</li>
+          <li><strong>Intervenciones lúdicas y progresivas</strong> con recursos visuales y auditivos.</li>
+          <li><strong>Coordinación con la familia</strong> (y escuela cuando hace falta).</li>
+        </ul>
       </div>
-    </details>
-
-    <details class="faqi">
-      <summary>¿Cómo reservo y coordino el horario?</summary>
-      <div class="inner">
-        Escribime por WhatsApp con tu disponibilidad. Reservo el turno con una
-        <strong>seña de $10.000</strong>. Si necesitás reprogramar, avisá con
-        <strong>48 h</strong> de antelación; con menos aviso, la seña se pierde.
-        <div style="margin-top:10px">
-          <a class="cta" href="https://wa.me/5492996044900?text=Hola%20Daiana,%20quiero%20reservar%20una%20sesi%C3%B3n%20de%20lenguaje%20infantil."
-             target="_blank" rel="noopener">Reservar por WhatsApp</a>
-        </div>
-      </div>
-    </details>
-
-    <details class="faqi">
-      <summary>Duración y frecuencia</summary>
-      <div class="inner">
-        Las sesiones son de <strong>40 minutos</strong>. La frecuencia se define según objetivos y ritmo del niño; lo revisamos juntas/os en el proceso.
-      </div>
-    </details>
+    </section>
   </div>
-</section>
 
+  <!-- MI ENFOQUE -->
+  <section class="container" id="enfoque">
+    <h2 style="margin-top:0">Mi enfoque</h2>
+
+    <div class="grid-3">
+      <article class="card">
+        <span class="badge">Comunicación</span>
+        <h3>Lenguaje y habla</h3>
+        <p>Favorezco comprensión y expresión verbal: vocabulario, construcción de frases, turnos de palabra y claridad al hablar.</p>
+      </article>
+
+      <article class="card">
+        <span class="badge" style="background:#eaf6ff;color:#124b7a;border-color:#d7ecff">Aprendizaje</span>
+        <h3>Funciones que sostienen el lenguaje</h3>
+        <p>Atención, memoria de trabajo, secuenciación y juego simbólico; siempre desde actividades significativas.</p>
+      </article>
+
+      <article class="card">
+        <span class="badge" style="background:#f2e8ff;color:#4a2f9e;border-color:#e7dcff">Socioemocional</span>
+        <h3>Habilidades sociales</h3>
+        <p>Regulación emocional, pedir/aceptar ayuda y comunicación funcional en juego compartido y vida cotidiana.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="container" id="proceso">
+    <h2 style="margin-top:0">¿Cómo trabajo?</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1) Entrevista de admisión</h3>
+        <p>Nos conocemos, relevamos historia, establecemos objetivos y acordamos la modalidad.</p>
+      </div>
+      <div class="step">
+        <h3>2) Observación psicológica integral</h3>
+        <p>Observación clínica acorde a la edad y contexto; registro del perfil comunicativo para orientar el trabajo.</p>
+      </div>
+      <div class="step">
+        <h3>3) Intervención y acompañamiento</h3>
+        <p>Sesiones lúdicas, ajustes periódicos y coordinación con la familia. La reserva de turnos se realiza por WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="container" id="ambiente">
+    <h2 style="margin-top:0">Ambiente & materiales</h2>
+    <div class="gallery">
+      <figure class="big">
+        <img src="infantil1.jpg" alt="Espacio de juego y materiales">
+      </figure>
+      <div class="side">
+        <figure><img src="infantil2.jpg" alt="Consultorio – imagen 2"></figure>
+        <figure><img src="infantil3.jpg" alt="Consultorio – imagen 3"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
 <footer>
   <div class="container footer">
     <div>
       <strong>Lenguaje Infantil</strong>
-      <p class="muted">Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Mirada clínica y lúdica.</p>
+      <p class="lede">Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Mirada clínica y lúdica.</p>
       <div style="display:flex; gap:10px; flex-wrap:wrap">
-        <a class="btn btn-ghost" href="#ayuda">Enfoque</a>
-        <a class="cta" href="https://wa.me/5492996044900" target="_blank" rel="noopener">Escribime por WhatsApp</a>
+        <a class="btn btn-ghost" href="#enfoque">Quiero ayudarte</a>
+        <a class="btn btn-grad" href="https://wa.me/5492996044900?text=Hola%2C%20quisiera%20coordinar%20mi%20sesión." target="_blank" rel="noopener">Escribime un e-mail / WhatsApp</a>
       </div>
     </div>
     <div>
       <h4>Secciones</h4>
       <div style="display:grid; gap:6px">
-        <a href="#que">Qué incluyo</a>
+        <a href="#incluyo">Qué incluyo</a>
+        <a href="#enfoque">Mi enfoque</a>
         <a href="#proceso">Proceso</a>
         <a href="#ambiente">Ambiente</a>
-        <a href="#faq">Preguntas</a>
       </div>
     </div>
     <div>
       <h4>Contacto</h4>
       <div style="display:grid; gap:6px">
         <span>Argentina · atención presencial</span>
-        <a href="mailto:comunicar.terapiadelenguaje@gmail.com">comunicar.terapiadelenguaje@gmail.com</a>
         <a href="https://wa.me/5492996044900" target="_blank" rel="noopener">WhatsApp directo</a>
+        <a href="mailto:comunicar.terapiadelenguaje@gmail.com">comunicar.terapiadelenguaje@gmail.com</a>
       </div>
     </div>
   </div>
@@ -302,15 +290,19 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 </footer>
 
 <script>
-// año dinámico
+// Año dinámico
 document.getElementById('y').textContent = new Date().getFullYear();
-// scroll suave
-document.addEventListener('click', (e)=>{
-  const a = e.target.closest('a[href^="#"]'); if(!a) return;
-  const el = document.querySelector(a.getAttribute('href'));
-  if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+
+// Scroll suave entre anclas
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="#"]'); if (!a) return;
+  const id = a.getAttribute('href'); const el = document.querySelector(id);
+  if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth', block:'start' }); history.pushState(null,'',id); }
 });
 </script>
+</body>
+</html>
+
 
 </body>
 </html>
