@@ -3,9 +3,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lenguaje Infantil · Desarrollo y Estimulación del Lenguaje</title>
-<meta name="description" content="Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Evaluación clínica, juego, regulación socioemocional y comunicación funcional. Atención online y coordinación con la familia."/>
+<title>Lenguaje Infantil · Psicología del desarrollo y estimulación del lenguaje</title>
+<meta name="description" content="Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Observación psicológica integral, juego terapéutico y estrategias comunicativas para la vida diaria. Atención online y coordinación con familia y escuela."/>
 <link rel="canonical" href="https://daiana-psicologa.github.io/lenguaje-infantil/"/>
+
+<!-- OG / Twitter -->
+<meta property="og:title" content="Lenguaje Infantil · Psicología del desarrollo del lenguaje"/>
+<meta property="og:description" content="Observación psicológica integral, juego terapéutico y estrategias comunicativas para la vida diaria."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://daiana-psicologa.github.io/lenguaje-infantil/"/>
+<meta name="twitter:card" content="summary_large_image"/>
 
 <!-- Fuente -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,351 +21,307 @@
 
 <style>
 :root{
-  --bg:#FFF8F1;
-  --panel:#FFFFFF;
-  --ink:#241F16;
-  --muted:#5e5850;
-  --line:#efe8df;
-  --grad1:#7C69FF;
-  --grad2:#FF6FB5;
-  --pill:#EDE8FF;
-  --max:1140px;
-  --rad:16px;
-  --shadow:0 18px 46px rgba(40,20,10,.12);
+  --ink:#1e1b16; --muted:#5b554d;
+  --bg:#fff9f2; --panel:#ffffff; --band:#f4eefb;
+  --line:#efe7d6;
+  --brand1:#8b5cf6; --brand2:#ec4899;
+  --ok:#16a34a;
+  --radius:18px; --shadow:0 14px 38px rgba(0,0,0,.10);
+  --max:1140px; --narrow:980px;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.65}
+body{
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink); background:var(--bg); line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
 img{max-width:100%;display:block}
+a{color:#2f2a22}
+.container{max-width:var(--max); margin:auto; padding:0 22px}
+.narrow{max-width:var(--narrow); margin:auto; padding:0 22px}
 
-.container{max-width:var(--max);margin:auto;padding:0 20px}
-section{padding:64px 0}
-
+/* Header */
 header{
-  position:sticky;top:0;z-index:50;background:rgba(255,248,241,.92);
-  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)
+  position:sticky; top:0; z-index:10; background:rgba(255,249,242,.85);
+  backdrop-filter: blur(10px); border-bottom:1px solid var(--line);
 }
-.navbar{height:70px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;gap:10px;align-items:center}
-.brand img{height:34px;width:34px;border-radius:999px;border:1px solid var(--line)}
-.brand b{font-weight:900}
+.top{height:72px; display:flex; align-items:center; justify-content:space-between}
+.brand{display:flex; gap:12px; align-items:center}
+.brand img{width:32px;height:32px;border-radius:999px;object-fit:cover}
+.brand .name{font-weight:900}
+nav{display:flex; gap:22px; align-items:center; flex-wrap:wrap}
+nav a{text-decoration:none; font-weight:800; color:#3a342c}
 
-nav a{color:var(--ink);text-decoration:none;font-weight:800;margin-left:18px}
-.cta{
-  background-image:linear-gradient(90deg,var(--grad1),var(--grad2));
-  color:#fff;border-radius:999px;padding:10px 16px;text-decoration:none;font-weight:900
+/* CTA */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 18px; border-radius:999px; font-weight:900; text-decoration:none;
+  background:linear-gradient(90deg,var(--brand1),var(--brand2)); color:#fff; box-shadow:var(--shadow)
+}
+.btn-outline{
+  background:#fff; border:1px solid var(--line); color:#2f2a22; box-shadow:0 8px 24px rgba(0,0,0,.06)
 }
 
-/* HERO */
-.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;padding:74px 0}
-.eyebrow{letter-spacing:.14em;text-transform:uppercase;color:#7c6bff;font:900 .8rem/1 Inter}
-h1{margin:.3rem 0;font:900 clamp(30px,5.2vw,54px)/1.05 Inter}
-.lede{color:var(--muted)}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:900;text-decoration:none}
-.btn-outline{background:#fff;border:1px solid var(--line);padding:12px 16px;color:var(--ink)}
-.btn-grad{background-image:linear-gradient(90deg,var(--grad1),var(--grad2));color:#fff;padding:12px 18px}
-.portrait-wrap{position:relative}
-.portrait-bg{width:min(520px,96%);aspect-ratio:1/1;border-radius:28px;
-  background:radial-gradient(120px 120px at 22% 20%, #efe7ff 0%, transparent 60%), #f7f2ff;}
-.portrait{position:absolute;inset:auto 4% -14px auto;width:min(620px,98%);filter:drop-shadow(0 30px 46px rgba(0,0,0,.18))}
+/* Hero */
+.hero{display:grid; grid-template-columns:1.05fr .95fr; gap:44px; align-items:center; padding:64px 0}
+.eyebrow{font-weight:900; color:#7c3aed; letter-spacing:.12em; text-transform:uppercase; font-size:.86rem}
+h1{font:900 clamp(30px,5.4vw,58px)/1.06 Inter; margin:.2rem 0 .6rem}
+.lede{color:var(--muted); max-width:70ch}
+.actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+.photo{position:relative}
+.portrait-wrap{
+  background:radial-gradient(50% 36% at 50% 30%, #f6e9ff 0, #ffe8f2 60%, #fff 100%);
+  border-radius:28px; padding:14px; box-shadow:var(--shadow)
+}
+.portrait{border-radius:22px}
 
-/* PANEL */
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);box-shadow:var(--shadow)}
+/* Secciones */
+section{padding:56px 0}
+.section-title{font:900 clamp(22px,3.8vw,34px)/1.12 Inter; margin:0 0 18px}
 
-/* INCLUYE */
-.band{background:#F6F1FF;padding:46px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.list{padding:16px}
-.list li{margin:.35rem 0}
+/* Qué incluyen */
+.panel{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:18px 18px; box-shadow:var(--shadow)}
+.band{background:var(--band); padding:44px 0}
 
-/* CARDS QUIERO AYUDARTE */
-.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:18px;box-shadow:var(--shadow)}
-.tag{display:inline-block;font:800 .78rem/1 Inter;background:var(--pill);padding:6px 10px;border-radius:999px}
+/* Quiero ayudarte (cards) */
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+@media (max-width:980px){ .hero{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} }
+.card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+.tag{display:inline-block; font-size:.78rem; font-weight:800; padding:6px 10px; border-radius:999px; background:#ede9fe; color:#5b21b6}
+.card h3{margin:10px 0 6px}
+.card p{margin:.4rem 0; color:#3f3a33}
 
-/* PROCESO */
-.steps .item{background:#fff;border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin:12px 0}
+/* Proceso */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.step{background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+@media (max-width:980px){ .steps{grid-template-columns:1fr} }
 
-/* GALERÍA */
-.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-.sidecol{display:grid;gap:18px}
-.gallery img{border-radius:var(--rad);border:1px solid var(--line);box-shadow:var(--shadow);object-fit:cover}
+/* Galería */
+.gallery{display:grid; grid-template-columns:1.15fr .85fr; gap:16px}
+.stacked{display:grid; gap:16px}
+.gimg{border-radius:18px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line)}
+@media (max-width:980px){ .gallery{grid-template-columns:1fr} }
 
-/* PAGOS */
-.pay-title{margin-bottom:8px}
-.paygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:12px}
-.paycard{display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid var(--line);border-radius:var(--rad);background:#fff;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
-.paycard:hover{transform:translateY(-1px)}
-.price{font:900 22px/1 Inter}
-.icons{display:flex;gap:8px;align-items:center;margin-top:auto}
-.badge{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 10px;border-radius:999px;font:800 12px/1 Inter;border:1px solid #e8e2d6;background:#fff}
-.badge.visa{color:#1a1f71;border-color:#dfe3f0}
-.badge.amex{color:#fff;background:#016fd0;border-color:#016fd0}
-.badge.qr{color:#fff;background:#111;border-color:#111}
-.badge.mc{width:46px;padding:0;border-color:#eadfd2}
-.badge.mc svg{width:22px;height:22px}
-
-/* FAQ */
-.faq .q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;margin:10px 0}
-.faq details{border:1px solid var(--line);background:#fff;border-radius:14px;margin:10px 0;overflow:hidden}
-.faq summary{cursor:pointer;padding:16px 18px;font-weight:900;list-style:none;display:flex;justify-content:space-between;align-items:center}
-.faq summary::after{content:"+";font-weight:900;color:#7c55c8}
-.faq details[open] summary{border-bottom:1px dashed var(--line)}
+/* FAQ simple */
+.faq{display:grid; gap:12px}
+.faq details{background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow)}
+.faq summary{list-style:none; cursor:pointer; padding:14px 16px; font-weight:900; display:flex; justify-content:space-between; align-items:center}
+.faq summary::after{content:"+"; font-weight:900; color:#7c3aed}
 .faq details[open] summary::after{content:"–"}
-.faq .a{padding:12px 18px;color:var(--muted)}
+.faq .content{padding:0 16px 16px; color:#3f3a33}
 
-/* FOOTER */
-footer{background:#fff;border-top:1px solid var(--line);margin-top:40px}
-.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;padding:26px 0}
-.legal{display:flex;justify-content:space-between;align-items:center;padding:12px 0 22px;color:#6e655c;font-size:.95rem}
-
-@media (max-width:980px){
-  .hero{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr}
-  .foot{grid-template-columns:1fr}
-}
+/* Footer */
+footer{background:#fff; border-top:1px solid var(--line); margin-top:36px}
+.foot{display:grid; grid-template-columns:2fr 1fr 1fr; gap:22px; padding:28px 0}
+.legal{display:flex; justify-content:space-between; padding:10px 0 24px; color:#6a645b}
+@media (max-width:980px){ .foot{grid-template-columns:1fr} .legal{flex-direction:column; gap:8px} }
 </style>
-
-<!-- MasterCard SVG para la badge -->
-<template id="mc-icon">
-  <svg viewBox="0 0 40 24" aria-hidden="true">
-    <circle cx="15" cy="12" r="9" fill="#EB001B"></circle>
-    <circle cx="25" cy="12" r="9" fill="#F79E1B" style="mix-blend-mode:multiply"></circle>
-  </svg>
-</template>
-<script>
-document.addEventListener('DOMContentLoaded', ()=>{
-  document.querySelectorAll('.badge.mc').forEach(b=>{
-    const t=document.getElementById('mc-icon'); b.appendChild(t.content.cloneNode(true));
-  });
-});
-</script>
 </head>
-
 <body>
 
 <header>
-  <div class="container navbar">
+  <div class="container top">
     <div class="brand">
-      <img src="./retrato-perfil.png" alt="Daiana">
-      <b>Lenguaje Infantil</b>
+      <img src="./retrato-perfil.png" alt="Daiana · Lenguaje Infantil">
+      <div class="name">Lenguaje Infantil</div>
     </div>
     <nav>
-      <a href="#sesiones">Sesiones</a>
-      <a href="#ayuda">Quiero ayudarte</a>
+      <a href="#incluye">Sesiones</a>
+      <a href="#ayudarte">Quiero ayudarte</a>
       <a href="#proceso">Proceso</a>
       <a href="#galeria">Galería</a>
-      <a class="cta" href="#pagos">Contacto / Pagos</a>
+      <a class="btn" href="https://wa.me/5492996044900?text=Hola%20Dai,%20quiero%20reservar%20una%20sesión%20de%20Lenguaje%20Infantil." target="_blank" rel="noopener">Reserva tu sesión</a>
     </nav>
   </div>
 </header>
 
-<section class="container hero" id="sesiones">
-  <div>
-    <div class="eyebrow">Psicología infantil</div>
-    <h1>Desarrollo y Estimulación del Lenguaje</h1>
-    <p class="lede">Me enfoco en la observación clínica y sesiones <b>adaptadas a cada niño</b>. Vinculo el área socioemocional con <b>lenguaje, habla y aprendizaje</b>, usando métodos basados en evidencia y juego para que la comunicación sea funcional en casa, escuela y juego.</p>
-    <div class="actions">
-      <a class="btn btn-outline" href="#ayuda">Ver cómo puedo ayudarte</a>
-      <a class="btn btn-grad" href="mailto:comunicar.terapiadelenguaje@gmail.com">Escribime un e-mail</a>
+<main>
+  <!-- HERO -->
+  <section class="container hero" id="inicio">
+    <div>
+      <div class="eyebrow">Psicología infantil</div>
+      <h1>Desarrollo y Estimulación del Lenguaje</h1>
+      <p class="lede">
+        Me enfoco en la <strong>observación psicológica integral</strong> y en sesiones
+        <strong>adaptadas a cada niño</strong>. Vinculo el área socioemocional con
+        <strong>lenguaje, habla y aprendizaje</strong> a través del <strong>juego terapéutico</strong>
+        y recursos con respaldo científico para que la comunicación sea funcional
+        en casa y en la escuela.
+      </p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/5492996044900?text=Hola%20Dai,%20quisiera%20reservar%20una%20sesión%20y%20consultar%20disponibilidad." target="_blank" rel="noopener">Reserva por WhatsApp</a>
+        <a class="btn btn-outline" href="#incluye">Ver cómo trabajo</a>
+      </div>
     </div>
-  </div>
-  <div class="portrait-wrap" aria-hidden="true">
-    <div class="portrait-bg"></div>
-    <img class="portrait" src="./retrato-perfil.png" alt="">
-  </div>
-</section>
-
-<!-- ¿Qué incluyen? -->
-<div class="band">
-  <section class="container">
-    <h2>¿Qué incluyen las sesiones de estimulación del lenguaje?</h2>
-    <div class="panel">
-      <div class="list">
-        <p>Evaluación clínica y diseño de objetivos funcionales. Intervención lúdica centrada en <b>lenguaje receptivo y expresivo, habla, vocabulario, juego y comunicación</b>. Integro estrategias para la <b>regulación socioemocional</b> y siempre comparto <i>herramientas prácticas para casa</i>.</p>
-        <ul>
-          <li>Observación y línea base (perfil de fortalezas y necesidades).</li>
-          <li>Plan individual con metas claras y medibles.</li>
-          <li>Sesiones lúdicas y progresivas; materiales visuales y auditivos.</li>
-          <li>Recomendaciones para el hogar y coordinación con escuela cuando hace falta.</li>
-        </ul>
+    <div class="photo">
+      <div class="portrait-wrap">
+        <img class="portrait" src="./retrato-perfil.png" alt="Daiana (psicología del lenguaje)">
       </div>
     </div>
   </section>
-</div>
 
-<!-- Quiero ayudarte -->
-<section class="container" id="ayuda">
-  <h2>Quiero ayudarte</h2>
-  <div class="grid-3">
-    <article class="card">
-      <span class="tag">Comunicación</span>
-      <h3>Apoyo especializado para niños con desafíos en comunicación</h3>
-      <p>Si tu hijo tiene dificultades para hablar, comprender o expresarse, evaluó con precisión y aplico estrategias basadas en evidencia para fortalecer su comunicación.</p>
-    </article>
-    <article class="card">
-      <span class="tag">Aprendizaje</span>
-      <h3>Terapia efectiva para niños con dificultades de aprendizaje</h3>
-      <p>Si leer, escribir o seguir consignas cuesta, una evaluación profesional brinda claridad. Diseño intervenciones personalizadas que respetan su ritmo y necesidades.</p>
-    </article>
-    <article class="card">
-      <span class="tag">Desarrollo</span>
-      <h3>Soluciones para niños con desafíos en el desarrollo</h3>
-      <p>Atiendo dificultades en habla, juego, regulación emocional o procesamiento sensorial con técnicas psicológicas que potencian autonomía y comunicación funcional.</p>
-    </article>
-  </div>
-</section>
-
-<!-- Proceso -->
-<section class="container" id="proceso">
-  <h2>¿Cómo inicio el proceso?</h2>
-  <div class="grid-3 steps">
-    <div class="item">
-      <h3>1) Entrevista de admisión</h3>
-      <p>Nos conocemos, relevamos historia y definimos preocupaciones y objetivos.</p>
-    </div>
-    <div class="item">
-      <h3>2) Evaluación clínica</h3>
-      <p>Observación y pruebas según la edad. Elaboro un plan de trabajo claro.</p>
-    </div>
-    <div class="item">
-      <h3>3) Intervención y acompañamiento</h3>
-      <p>Sesiones lúdicas, ajustes periódicos y estrategias simples para casa.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Galería -->
-<section class="container" id="galeria">
-  <h2>Ambiente & materiales</h2>
-  <div class="gallery">
-    <img src="./infantil2.jpg" alt="Consultorio principal">
-    <div class="sidecol">
-      <img src="./infantil1.jpg" alt="Espacio lúdico 1">
-      <img src="./infantil3.jpg" alt="Espacio lúdico 2">
-    </div>
-  </div>
-</section>
-
-<!-- PAGOS -->
-<section class="container" id="pagos">
-  <h2 class="pay-title">Pagos y reserva</h2>
-  <p class="lede">Elegí el plan y realizá el pago. Luego coordinamos por correo/WhatsApp el primer encuentro.</p>
-  <div class="paygrid">
-    <!-- 1 -->
-    <a class="paycard" href="#" target="_blank" rel="noopener">
-      <h3>Sesión individual (40′)</h3>
-      <div class="price">$45.000 AR</div>
-      <div class="icons" aria-hidden="true">
-        <span class="badge visa">VISA</span>
-        <span class="badge mc"></span>
-        <span class="badge amex">AMEX</span>
-        <span class="badge qr">QR</span>
+  <!-- QUÉ INCLUYEN -->
+  <div class="band" id="incluye">
+    <section class="container">
+      <h2 class="section-title">¿Qué incluyen las sesiones de estimulación del lenguaje?</h2>
+      <div class="panel">
+        <ul>
+          <li><strong>Observación psicológica integral:</strong> historia, contexto familiar y escolar, juego libre/dirigido, interacción y comunicación funcional.</li>
+          <li><strong>Hipótesis y objetivos funcionales:</strong> se definen metas claras y medibles en colaboración con la familia.</li>
+          <li><strong>Intervención lúdica con base empírica:</strong> trabajo sobre <em>lenguaje receptivo y expresivo</em>, habla, vocabulario, juego simbólico y comunicación.</li>
+          <li><strong>Coordinación con entorno</strong> (cuando es pertinente): pautas para la vida diaria y articulación con la escuela.</li>
+        </ul>
       </div>
-      <span class="btn btn-grad" style="margin-top:6px;align-self:flex-start">Pagar y agendar</span>
-    </a>
-    <!-- 4 -->
-    <a class="paycard" href="#" target="_blank" rel="noopener">
-      <h3>4 sesiones · 1 vez/semana</h3>
-      <div class="price">$180.000 AR</div>
-      <div class="icons" aria-hidden="true">
-        <span class="badge visa">VISA</span>
-        <span class="badge mc"></span>
-        <span class="badge amex">AMEX</span>
-        <span class="badge qr">QR</span>
-      </div>
-      <span class="btn btn-grad" style="margin-top:6px;align-self:flex-start">Pagar y agendar</span>
-    </a>
-    <!-- 8 -->
-    <a class="paycard" href="#" target="_blank" rel="noopener">
-      <h3>8 sesiones · 1 vez/semana</h3>
-      <div class="price">$340.000 AR</div>
-      <div class="icons" aria-hidden="true">
-        <span class="badge visa">VISA</span>
-        <span class="badge mc"></span>
-        <span class="badge amex">AMEX</span>
-        <span class="badge qr">QR</span>
-      </div>
-      <span class="btn btn-grad" style="margin-top:6px;align-self:flex-start">Pagar y agendar</span>
-    </a>
-    <!-- 16 -->
-    <a class="paycard" href="#" target="_blank" rel="noopener">
-      <h3>16 sesiones · 2 veces/semana</h3>
-      <div class="price">$650.000 AR</div>
-      <div class="icons" aria-hidden="true">
-        <span class="badge visa">VISA</span>
-        <span class="badge mc"></span>
-        <span class="badge amex">AMEX</span>
-        <span class="badge qr">QR</span>
-      </div>
-      <span class="btn btn-grad" style="margin-top:6px;align-self:flex-start">Pagar y agendar</span>
-    </a>
+    </section>
   </div>
-  <p class="lede" style="margin-top:10px"><b>Reprogramaciones:</b> con 48 h de aviso. Con menos antelación, la sesión se contabiliza como realizada.</p>
-</section>
 
-<!-- PREGUNTAS -->
-<section class="container faq" id="faq">
-  <h2>Preguntas frecuentes</h2>
+  <!-- QUIERO AYUDARTE -->
+  <section class="container" id="ayudarte">
+    <h2 class="section-title">Quiero ayudarte</h2>
+    <div class="grid-3">
+      <article class="card">
+        <span class="tag">Comunicación</span>
+        <h3>Apoyo especializado para niños con desafíos en comunicación</h3>
+        <p>Si tu hijo tiene dificultades para hablar, comprender o expresarse, trabajo para fortalecer su comunicación con objetivos posibles y seguimiento cercano.</p>
+      </article>
 
-  <details>
-    <summary>¿Qué incluyen nuestras terapias?</summary>
-    <div class="a">
-      Evaluación clínica, objetivos individualizados, sesiones lúdicas con base en evidencia y estrategias concretas para implementar en casa. Cuando ayuda, coordinamos con escuela y otros profesionales.
+      <article class="card">
+        <span class="tag" style="background:#e9f1ff;color:#1d4ed8">Aprendizaje</span>
+        <h3>Terapia efectiva ante dificultades de aprendizaje</h3>
+        <p>Cuando leer, escribir o seguir consignas cuesta, realizo una observación psicológica integral y diseño intervenciones personalizadas que respetan su ritmo.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag" style="background:#fce7f3;color:#be185d">Desarrollo</span>
+        <h3>Soluciones para niños con desafíos en el desarrollo</h3>
+        <p>Atiendo dificultades en habla, juego, regulación emocional o procesamiento sensorial, con técnicas psicológicas que potencian autonomía y comunicación funcional.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag" style="background:#e4ffe9;color:#166534">Familia</span>
+        <h3>Orientación para familias</h3>
+        <p>Brindo guía clara y herramientas prácticas para acompañar el crecimiento desde casa con confianza y seguridad.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag" style="background:#fff7e6;color:#92400e">Habilidades sociales</span>
+        <h3>¿Mi hijo puede mejorar sus habilidades sociales?</h3>
+        <p>Sí. Entrenamos habilidades socioemocionales y comunicativas (turnos de palabra, contacto visual, juego compartido, pedir/aceptar ayuda) para aumentar confianza.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag" style="background:#ede9fe;color:#5b21b6">Contacto</span>
+        <h3>Reserva tu sesión</h3>
+        <p>Escribime por WhatsApp para consultar disponibilidad, acordar día y horario y comenzar el proceso.</p>
+        <p><a class="btn" href="https://wa.me/5492996044900?text=Hola%20Dai,%20quiero%20reservar%20una%20sesión%20de%20Lenguaje%20Infantil." target="_blank" rel="noopener">Reservar por WhatsApp</a></p>
+      </article>
     </div>
-  </details>
+  </section>
 
-  <details>
-    <summary>¿Mi hijo puede mejorar sus habilidades sociales?</summary>
-    <div class="a">
-      Sí. Parte esencial del trabajo se centra en habilidades socioemocionales y comunicativas (turnos de palabra, contacto visual, juego compartido, pedir/aceptar ayuda, resolución de conflictos).
+  <!-- PROCESO -->
+  <section class="container" id="proceso">
+    <h2 class="section-title">¿Cómo es el proceso?</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1) Primer contacto por WhatsApp</h3>
+        <p>Coordinamos un encuentro de admisión. Conversamos sobre historia, motivos de consulta y expectativas.</p>
+      </div>
+      <div class="step">
+        <h3>2) Observación psicológica integral</h3>
+        <p>Juego libre/dirigido, interacción y registro de habilidades comunicativas. A partir de esto, definimos metas claras y medibles.</p>
+      </div>
+      <div class="step">
+        <h3>3) Intervención y acompañamiento</h3>
+        <p>Sesiones lúdicas, ajustes periódicos y coordinación con familia/escuela cuando sea útil. Buscamos cambios que se noten en lo cotidiano.</p>
+      </div>
     </div>
-  </details>
+  </section>
 
-  <details>
-    <summary>¿Cómo puedo empezar el proceso de inscripción?</summary>
-    <div class="a">
-      Escribime por correo a <a href="mailto:comunicar.terapiadelenguaje@gmail.com">comunicar.terapiadelenguaje@gmail.com</a>. Agendamos una entrevista de admisión, definimos objetivos y comenzamos la intervención.
+  <!-- GALERÍA -->
+  <section class="container" id="galeria">
+    <h2 class="section-title">Ambiente & materiales</h2>
+    <div class="gallery">
+      <div class="gimg"><img src="./infantil2.jpg" alt="Espacio principal de trabajo"></div>
+      <div class="stacked">
+        <div class="gimg"><img src="./infantil1.jpg" alt="Consultorio infantil"></div>
+        <div class="gimg"><img src="./infantil3.jpg" alt="Zona de juego y materiales"></div>
+      </div>
     </div>
-  </details>
-</section>
+  </section>
 
+  <!-- PREGUNTAS FRECUENTES -->
+  <section class="container">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <div class="faq">
+      <details open>
+        <summary>¿Qué incluyen nuestras terapias?</summary>
+        <div class="content">
+          Observación psicológica integral, definición de objetivos funcionales y trabajo lúdico con base empírica sobre lenguaje receptivo/expresivo, habla, vocabulario y juego simbólico. Coordinamos con la escuela cuando es útil.
+        </div>
+      </details>
+      <details>
+        <summary>¿Mi hijo puede mejorar sus habilidades sociales?</summary>
+        <div class="content">
+          Sí. Entrenamos habilidades socioemocionales y comunicativas (turnos de palabra, contacto visual, juego compartido, pedir/aceptar ayuda) para favorecer vínculos y confianza.
+        </div>
+      </details>
+      <details>
+        <summary>¿Cómo reservo un turno?</summary>
+        <div class="content">
+          Escribime por WhatsApp para consultar disponibilidad y coordinar el día y horario. <br>
+          <a class="btn" href="https://wa.me/5492996044900?text=Hola%20Dai,%20quiero%20reservar%20una%20sesión%20de%20Lenguaje%20Infantil." target="_blank" rel="noopener">Reservar por WhatsApp</a>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
 <footer>
   <div class="container foot">
     <div>
-      <b>Lenguaje Infantil</b>
-      <p class="lede" style="margin:.4rem 0 0">Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Mirada clínica y lúdica.</p>
-      <div style="display:flex;gap:10px;margin-top:10px">
-        <a class="btn btn-outline" href="#ayuda">Quiero ayudarte</a>
-        <a class="btn btn-grad" href="mailto:comunicar.terapiadelenguaje@gmail.com">Escribime un e-mail</a>
+      <strong>Lenguaje Infantil</strong>
+      <p>Psicología infantil enfocada en desarrollo y estimulación del lenguaje. Mirada clínica y lúdica.</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap">
+        <a class="btn btn-outline" href="#ayudarte">Quiero ayudarte</a>
+        <a class="btn" href="https://wa.me/5492996044900?text=Hola%20Dai,%20quiero%20reservar%20una%20sesión." target="_blank" rel="noopener">Escribime por WhatsApp</a>
       </div>
     </div>
     <div>
       <h4>Secciones</h4>
-      <div style="display:grid;gap:6px">
-        <a href="#sesiones">Sesiones</a>
-        <a href="#ayuda">Quiero ayudarte</a>
+      <div style="display:grid; gap:6px">
+        <a href="#incluye">Sesiones</a>
+        <a href="#ayudarte">Quiero ayudarte</a>
         <a href="#proceso">Proceso</a>
         <a href="#galeria">Galería</a>
       </div>
     </div>
     <div>
       <h4>Contacto</h4>
-      <div style="display:grid;gap:6px">
+      <div style="display:grid; gap:6px">
         <span>Argentina · atención online</span>
         <a href="mailto:comunicar.terapiadelenguaje@gmail.com">comunicar.terapiadelenguaje@gmail.com</a>
+        <a href="https://wa.me/5492996044900" target="_blank" rel="noopener">WhatsApp directo</a>
       </div>
     </div>
   </div>
   <div class="container legal">
     <small>© <span id="y"></span> Lenguaje Infantil</small>
-    <a href="#sesiones">Volver arriba</a>
+    <small><a href="#inicio">Volver arriba</a></small>
   </div>
 </footer>
 
 <script>
+// año dinámico
 document.getElementById('y').textContent = new Date().getFullYear();
+// scroll suave
+document.addEventListener('click', (e)=>{
+  const a = e.target.closest('a[href^="#"]'); if(!a) return;
+  const el = document.querySelector(a.getAttribute('href'));
+  if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+});
 </script>
-
 </body>
 </html>
+
