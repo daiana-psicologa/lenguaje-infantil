@@ -161,77 +161,49 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
 }
-/* ===== MI ENFOQUE — wrapper centrado, sin huecos ===== */
 
-/* Aire general reducido en la sección */
+  /* ——— Mi enfoque: versión editorial 1 columna ——— */
 #ayuda{
-  padding-top: 24px !important;
-  padding-bottom: 20px !important;
+  padding-top: 28px;
+  padding-bottom: 22px;
 }
-
-/* Subrayado sutil del H2 */
 #ayuda > h2{
-  margin: 0 0 8px;
-  position: relative;
+  margin: 0 0 10px;
 }
-#ayuda > h2::after{
-  content:"";
-  display:block;
-  width:120px;
-  height:4px;
-  border-radius:2px;
-  background:linear-gradient(90deg,var(--grad1),var(--grad2));
-  margin:8px 0 0;
-}
+#ayuda > h2::after{ display:none; }   /* quitamos la barra de color */
 
-/* Wrapper de la filosofía: centrado + 2 columnas en desktop */
+/* Texto centrado en columna angosta, sin columnas dobles */
 #ayuda .philo{
-  max-width: 880px;
-  margin: 6px auto 8px;       /* pegado al H2 y a las cards */
-  column-count: 2;
-  column-gap: 28px;
+  max-width: 760px;        /* lectura cómoda */
+  margin: 8px auto 10px;   /* centrado */
 }
 
-/* Títulos y párrafos dentro de la filosofía */
 #ayuda .philo h3{
   font-size: 1rem;
   line-height: 1.5;
-  margin: 8px 0 2px !important;
+  margin: 10px 0 4px;
   font-weight: 800;
-  color: #3a352e;
-  break-after: avoid;
+  color: #2f2a24;
 }
+
 #ayuda .philo p{
-  margin: 4px 0 8px !important; /* compacta fuerte */
-  line-height: 1.6;
+  margin: 6px 0 10px;      /* aire justo */
+  line-height: 1.68;
   color: var(--muted);
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  orphans: 2; widows: 2;
+  text-align: left;         /* más natural que justificado */
 }
 
-/* Eliminar cualquier remate grande del último párrafo */
-#ayuda .philo > :last-child{ margin-bottom: 0 !important; }
-
-/* Cards: sin hueco arriba y centradas */
+/* Cards bien pegadas al texto */
 #ayuda .grid-3{
-  margin-top: 6px !important;   /* clave para borrar el hueco */
+  margin-top: 10px;
   gap: 16px;
-  max-width: var(--max);
-  margin-left: auto;
-  margin-right: auto;
 }
-#ayuda .card{ padding: 18px; box-shadow: var(--shadow-s); }
 
-/* Responsive: 1 columna en móvil, todo compacto */
-@media (max-width: 900px){
-  #ayuda .philo{ column-count: 1; }
-}
+/* Móvil: todo igual de prolijo */
 @media (max-width: 720px){
-  #ayuda{ padding-top: 20px !important; padding-bottom: 18px !important; }
-  #ayuda .philo{ margin: 6px auto 6px; }
-  #ayuda .grid-3{ margin-top: 6px !important; gap: 12px; }
+  #ayuda{ padding-top: 24px; padding-bottom: 18px; }
+  #ayuda .philo{ max-width: 100%; padding: 0 4px; }
+  #ayuda .grid-3{ margin-top: 8px; gap: 12px; }
 }
 </style>
 
