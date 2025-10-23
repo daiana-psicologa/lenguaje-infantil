@@ -161,6 +161,48 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
 }
+
+  /* ——— Micro-tuning visual (armónico y profesional) ——— */
+
+/* 1) “Mi enfoque”: ancho cómodo y aire entre párrafos */
+#ayuda p{
+  max-width: 90ch;      /* lectura cómoda en desktop */
+  margin: 0 0 10px;     /* separación pareja */
+}
+
+/* 2) Subtítulos dentro de la filosofía: sobrios y consistentes */
+#ayuda h3{
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 14px 0 6px;
+  font-weight: 800;     /* fuerte pero no exagerado */
+  color: #2b2a27;
+}
+
+/* 3) Cards de “Mi enfoque”: mismo aire y sombra suave */
+#ayuda .card{
+  padding: 18px;
+  box-shadow: var(--shadow-s);
+}
+
+/* 4) Separación entre la filosofía y las cards */
+#ayuda .grid-3{ margin-top: 14px; }
+
+/* 5) Consistencia en listas y cajas de la sección anterior */
+#que .box{ margin-bottom: 18px; }
+
+/* 6) CTA dentro de FAQ: centrado y con respiración */
+#faq .cta{
+  display: inline-flex;
+  margin: 8px auto 0;
+}
+
+/* 7) Responsive: columnas con más aire en móvil */
+@media (max-width: 720px){
+  #ayuda .grid-3{ gap: 14px; }
+  #ayuda h3{ margin-top: 12px; }
+  #ayuda p{ max-width: 100%; }
+}
 </style>
 
 <!-- Schema.org (JSON-LD): Negocio Local de Psicología Infantil en Neuquén -->
@@ -298,23 +340,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="container" id="ayuda">
   <h2>Mi enfoque</h2>
   
- <!-- Filosofía de trabajo (colocar debajo de <h2>Mi enfoque</h2>) -->
-<p>
-  <strong>Sencillez, humanidad y práctica clínica rigurosa.</strong>
-  Cada proceso se diseña con el niño y su entorno. No aplico recetas: las
-  estrategias se adaptan a la historia, el ritmo y el momento del desarrollo.
-</p>
-<p>
-  <strong>Lo clínico se une a la sabiduría familiar.</strong>
-  Yo aporto marco y herramientas; ustedes, el conocimiento más valioso sobre su hijo.
-  Si lo de siempre no funciona, probamos alternativas realistas y aplicables en casa y en la escuela.
-</p>
-<p>
-  <strong>El vínculo es el centro.</strong>
-  Sin conexión no hay avance. La técnica está al servicio de la persona; no uso protocolos rígidos.
-  <strong>Enfoque humanista e integrativo</strong> con juego terapéutico y mirada sistémica cuando ayuda.
-</p>
+ <!-- Filosofía de trabajo (pegar aquí, debajo de <h2>Mi enfoque</h2>) -->
+<section aria-label="Filosofía de trabajo">
+  <h3>Sencillez, humanidad y práctica clínica rigurosa</h3>
+  <p>Cada proceso se diseña con el niño y su entorno familiar. No aplico recetas: las estrategias se adaptan a cada historia, ritmo y momento del desarrollo.</p>
+
+  <h3>Lo clínico se une a la sabiduría familiar</h3>
+  <p>Yo aporto el marco psicológico y las herramientas; las familias aportan el conocimiento más valioso sobre su hijo. El avance aparece cuando unimos ambas miradas con respeto y colaboración.</p>
+
+  <h3>Si lo de siempre no funciona, probamos algo distinto</h3>
+  <p>Repetir estrategias que no ayudan solo genera frustración. En sesión buscamos alternativas realistas y aplicables en casa y en la escuela, evitando fórmulas generales.</p>
+
+  <h3>El vínculo es el centro del trabajo</h3>
+  <p>Sin conexión emocional, el proceso no avanza. La relación con el niño y su familia es la base desde la cual construimos confianza, curiosidad y aprendizaje.</p>
+
+  <h3>Técnica al servicio de la persona</h3>
+  <p>No creo en protocolos rígidos ni en “trucos” universales. Las intervenciones se ajustan al momento, la edad y las necesidades emocionales del niño, buscando cambios visibles en su comunicación cotidiana.</p>
+
+  <h3>Enfoque humanista e integrativo</h3>
+  <p>Trabajo desde una mirada psicológica del desarrollo y la Terapia Focalizada en la Emoción. Integro herramientas lúdicas, existenciales y sistémicas que ayudan a comprender al niño más allá del síntoma.</p>
+
+  <h3>Formato y objetivo</h3>
+  <p>La atención es <strong>presencial en Neuquén Capital</strong> (y online si se requiere). El objetivo es favorecer una comunicación clara, emocionalmente sana y funcional, para que cada niño pueda expresarse y sentirse comprendido.</p>
+</section>
 <!-- Fin filosofía -->
+
   
   <div class="grid-3">
     <article class="card">
