@@ -161,35 +161,6 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
 }
-/* ——— Afinado de la sección “Mi enfoque” ——— */
-
-/* 1) Filosofía: ancho cómodo y color más suave */
-#ayuda > p{
-  max-width: 78ch;         /* lectura cómoda en desktop */
-  color: var(--muted);     /* baja intensidad del párrafo */
-  margin: 0 0 10px;
-}
-
-/* 2) Subtítulos de la filosofía: más discretos */
-#ayuda > h3{
-  font-size: 1rem;         /* más chico que un H2 */
-  line-height: 1.5;
-  margin: 14px 0 6px;
-  font-weight: 800;
-  color: #3a352e;          /* menos contrastado que el H2 */
-}
-
-/* 3) Separación visual entre la filosofía y las cards */
-#ayuda .grid-3{ margin-top: 16px; }
-
-/* 4) Cards con aire y sombra pareja */
-#ayuda .card{ padding: 18px; box-shadow: var(--shadow-s); }
-
-/* 5) Mobile: que la filosofía use todo el ancho y respire */
-@media (max-width: 720px){
-  #ayuda > p{ max-width: 100%; }
-  #ayuda .grid-3{ gap: 14px; }
-}
 /* ====== MI ENFOQUE – afinado pro sin tocar HTML ====== */
 
 /* 0) Subrayado discreto del H2 y menos aire arriba/abajo */
