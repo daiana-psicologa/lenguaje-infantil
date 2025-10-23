@@ -193,7 +193,19 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   #ayuda .box-enfoque .philo{ max-width: 100%; }
   #ayuda .grid-3{ margin-top: 8px; gap: 12px; }
 }
+/* — Forzar que el texto de "Mi enfoque" use TODO el ancho de la caja — */
+#ayuda .box-enfoque .philo{
+  max-width: none !important;   /* quita el tope */
+  width: 100% !important;       /* usa todo el ancho interno de .box */
+  column-count: initial !important; /* por si quedó en 2 columnas, lo apaga */
+  column-gap: 0 !important;
+  margin: 0 !important;         /* sin centrado artificial */
+}
 
+/* Márgenes y lectura dentro de la caja (usará el padding de .box) */
+#ayuda .box-enfoque{ padding: 22px 26px; }
+#ayuda .box-enfoque .philo h3{ margin: 10px 0 4px; }
+#ayuda .box-enfoque .philo p{ margin: 6px 0 10px; line-height: 1.68; }
 </style>
 
 <!-- Schema.org (JSON-LD): Negocio Local de Psicología Infantil en Neuquén -->
@@ -329,9 +341,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <section class="container" id="ayuda">
-  <h2>Mi enfoque</h2>
-
-  <section class="container" id="ayuda">
   <h2>Mi enfoque</h2>
 
   <!-- Caja blanca como la de arriba -->
