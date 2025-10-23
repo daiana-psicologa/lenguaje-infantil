@@ -161,20 +161,19 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
 }
-
-  /* Caja de Mi enfoque */
+/* — Mi enfoque: caja y texto a todo el ancho — */
 #ayuda .box-enfoque{
-  margin: 10px 0 12px;        /* separa del título y de las cards */
-  padding: 22px 22px;         /* un poco más de aire */
+  margin: 10px 0 12px;
+  padding: 22px 26px;
 }
-
-/* Columna editorial centrada dentro de la caja */
 #ayuda .box-enfoque .philo{
-  max-width: 760px;           /* lectura cómoda */
-  margin: 0 auto;             /* centrado */
+  max-width: none !important;
+  width: 100% !important;
+  column-count: initial !important;
+  column-gap: 0 !important;
+  margin: 0 !important;
 }
 #ayuda .box-enfoque .philo h3{
-  font-size: 1rem;
   margin: 10px 0 4px;
   font-weight: 800;
   color: #2f2a24;
@@ -184,39 +183,8 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   line-height: 1.68;
   color: var(--muted);
 }
-
-/* Cards pegadas a la caja */
-#ayuda .grid-3{ margin-top: 10px; gap: 16px; }
-
-@media (max-width: 720px){
-  #ayuda .box-enfoque{ padding: 18px; margin: 8px 0 10px; }
-  #ayuda .box-enfoque .philo{ max-width: 100%; }
-  #ayuda .grid-3{ margin-top: 8px; gap: 12px; }
-}
-/* — Forzar que el texto de "Mi enfoque" use TODO el ancho de la caja — */
-#ayuda .box-enfoque .philo{
-  max-width: none !important;   /* quita el tope */
-  width: 100% !important;       /* usa todo el ancho interno de .box */
-  column-count: initial !important; /* por si quedó en 2 columnas, lo apaga */
-  column-gap: 0 !important;
-  margin: 0 !important;         /* sin centrado artificial */
-}
-
-/* Márgenes y lectura dentro de la caja (usará el padding de .box) */
-#ayuda .box-enfoque{ padding: 22px 26px; }
-#ayuda .box-enfoque .philo h3{ margin: 10px 0 4px; }
-#ayuda .box-enfoque .philo p{ margin: 6px 0 10px; line-height: 1.68; }
-
-  /* Ajuste fino del bloque blanco de Mi enfoque */
-#ayuda .philo-box{ margin-top:10px; padding:24px 28px }
-
-/* Títulos h3 dentro de la filosofía: menos aire arriba */
-#ayuda .philo h3{ margin:18px 0 8px }
-#ayuda .philo p{ margin:0 0 14px }
-
-/* Cards pegadas al cuadro blanco, sin hueco extra */
-#ayuda .grid-3{ margin-top:16px }   /* <-- antes decía #ayuda + .grid-3 */
-
+/* Cards pegadas al cuadro blanco */
+#ayuda .grid-3{ margin-top: 16px; }
 </style>
 
 <!-- Schema.org (JSON-LD): Negocio Local de Psicología Infantil en Neuquén -->
