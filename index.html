@@ -222,6 +222,26 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 @media (max-width:980px){
   .footer .disclaimer{ padding: 12px 4px; }
 }
+/* --- Ajuste visual del disclaimer --- */
+.footer .disclaimer {
+  grid-column: 1 / -1;            /* ocupa todo el ancho del grid */
+  margin-top: 22px;               /* más aire superior */
+  padding: 18px 24px;             /* más aire interno */
+  border-top: 1px solid var(--line);
+  border-radius: 12px;            /* bordes suaves para armonizar con el resto */
+  background: #fffefb;            /* fondo levemente distinto del footer */
+  box-shadow: var(--shadow-s);    /* ligera sombra para destacarlo */
+  color: #5e5952;
+  line-height: 1.75;
+  font-size: 0.96rem;
+}
+
+@media (max-width: 980px) {
+  .footer .disclaimer {
+    padding: 16px 12px;
+    font-size: 0.94rem;
+  }
+}
 </style>
 
 <!-- Schema.org (JSON-LD): Negocio Local de Psicología Infantil en Neuquén -->
