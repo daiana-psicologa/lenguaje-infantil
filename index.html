@@ -210,7 +210,7 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 
 /* Footer ya lo tenés; sumo estilos del disclaimer */
 .footer .disclaimer{
-  grid-column: 1 / -1;        /* ocupa las 3 columnas */
+  grid-column: 1 / -1;      /* ocupa las 3 columnas */
   margin: 8px 0 0;
   padding: 12px 16px;
   border-top: 1px solid var(--line);
@@ -540,14 +540,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <!-- Disclaimer a lo ancho de todo el grid -->
+    <!-- ⬇️ ahora es hermano directo dentro de .footer -->
     <p class="disclaimer">
       Servicio psicológico orientado al desarrollo y la comunicación infantil.
       <strong>No realiza intervenciones fonoaudiológicas</strong> ni reemplaza la evaluación o el tratamiento
       fonoaudiológico y/o médico. Ante necesidades específicas de habla, voz o audición, se
       trabaja en coordinación con profesionales fonoaudiólogos/as.
     </p>
-    <!-- /Disclaimer -->
   </div>
 
   <div class="container legal">
@@ -555,18 +554,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <small><a href="#inicio">Volver arriba</a></small>
   </div>
 </footer>
-
-<script>
-// año dinámico
-document.getElementById('y').textContent = new Date().getFullYear();
-
-// scroll suave
-document.addEventListener('click', (e)=>{
-  const a = e.target.closest('a[href^="#"]'); if(!a) return;
-  const el = document.querySelector(a.getAttribute('href'));
-  if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
-});
-</script>
 
 </body> 
 </html>
