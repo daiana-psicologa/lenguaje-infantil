@@ -190,34 +190,85 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   #ayuda > p{ max-width: 100%; }
   #ayuda .grid-3{ gap: 14px; }
 }
-/* Compactar el espacio entre la filosofía y las 3 cards */
-#ayuda section[aria-label="Filosofía de trabajo"]{
-  margin-bottom: 6px;                 /* reduce el hueco debajo del bloque */
+/* ====== MI ENFOQUE – afinado pro sin tocar HTML ====== */
+
+/* 0) Subrayado discreto del H2 y menos aire arriba/abajo */
+#ayuda{
+  padding-top: 32px;           /* menos aire que el default */
+  padding-bottom: 24px;
 }
-#ayuda section[aria-label="Filosofía de trabajo"] > *:last-child{
-  margin-bottom: 0;                   /* quita margen del último párrafo */
+#ayuda > h2{
+  margin: 0 0 10px;
+  position: relative;
+}
+#ayuda > h2::after{
+  content:"";
+  display:block;
+  width:120px;
+  height:4px;
+  border-radius:2px;
+  background:linear-gradient(90deg,var(--grad1),var(--grad2));
+  margin:8px 0 0;
 }
 
-/* Márgenes internos más cortos en la filosofía */
-#ayuda section[aria-label="Filosofía de trabajo"] h3{
+/* 1) Centrar la columna de texto (h3 + p) y justificar párrafos
+      – funciona tanto si NO hay wrapper como si usaste
+      <section aria-label="Filosofía de trabajo"> */
+#ayuda > h3,
+#ayuda > p,
+#ayuda section[aria-label="Filosofía de trabajo"] > h3,
+#ayuda section[aria-label="Filosofía de trabajo"] > p{
+  max-width: 880px;            /* columna centrada */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ayuda > h3,
+#ayuda section[aria-label="Filosofía de trabajo"] > h3{
+  font-size: 1rem;
+  line-height: 1.5;
   margin: 10px 0 4px;
+  font-weight: 800;
+  color: #3a352e;
 }
-#ayuda section[aria-label="Filosofía de trabajo"] p{
+
+#ayuda > p,
+#ayuda section[aria-label="Filosofía de trabajo"] > p{
   margin: 6px 0;
-  max-width: 78ch;
+  line-height: 1.64;
   color: var(--muted);
+  text-align: justify;         /* más parejo visualmente */
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
-/* Las 3 cards pegadas sin exceso de espacio arriba */
+/* 2) Eliminar el “hueco” antes de las 3 cards */
+#ayuda > p:last-of-type,
+#ayuda section[aria-label="Filosofía de trabajo"] > p:last-child{
+  margin-bottom: 6px;          /* cierre corto del bloque de texto */
+}
+
+/* 3) Grid de 3 cards: pegado al texto y centrado */
 #ayuda .grid-3{
-  margin-top: 8px;                    /* antes 14–16px */
+  margin-top: 10px;            /* antes estaba alto */
   gap: 16px;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* En móvil, mantener todo compacto */
+#ayuda .card{ padding: 18px; box-shadow: var(--shadow-s); }
+
+/* 4) Mobile: que todo respire pero sin huecos grandes */
 @media (max-width: 720px){
-  #ayuda section[aria-label="Filosofía de trabajo"] p{ max-width: 100%; }
-  #ayuda .grid-3{ margin-top: 6px; gap: 12px; }
+  #ayuda{ padding-top: 26px; padding-bottom: 20px; }
+  #ayuda > h3,
+  #ayuda > p,
+  #ayuda section[aria-label="Filosofía de trabajo"] > h3,
+  #ayuda section[aria-label="Filosofía de trabajo"] > p{
+    max-width: 100%;
+  }
+  #ayuda .grid-3{ margin-top: 8px; gap: 12px; }
 }
 </style>
 
