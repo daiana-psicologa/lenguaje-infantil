@@ -190,35 +190,34 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   #ayuda > p{ max-width: 100%; }
   #ayuda .grid-3{ gap: 14px; }
 }
-/* Compactar la sección “Mi enfoque” */
-#ayuda{
-  padding-top: 36px;       /* antes: 68px (por defecto en section) */
-  padding-bottom: 32px;
+/* Compactar el espacio entre la filosofía y las 3 cards */
+#ayuda section[aria-label="Filosofía de trabajo"]{
+  margin-bottom: 6px;                 /* reduce el hueco debajo del bloque */
+}
+#ayuda section[aria-label="Filosofía de trabajo"] > *:last-child{
+  margin-bottom: 0;                   /* quita margen del último párrafo */
 }
 
-/* Párrafos y subtítulos más cerrados */
-#ayuda > h3{
-  margin: 10px 0 4px;      /* antes 14px 0 6px */
-  font-size: 1rem;
+/* Márgenes internos más cortos en la filosofía */
+#ayuda section[aria-label="Filosofía de trabajo"] h3{
+  margin: 10px 0 4px;
 }
-#ayuda > p{
-  margin: 6px 0;           /* antes 10px */
-  line-height: 1.62;       /* un poco más compacto */
+#ayuda section[aria-label="Filosofía de trabajo"] p{
+  margin: 6px 0;
   max-width: 78ch;
   color: var(--muted);
 }
 
-/* Separación mínima antes de las cards */
-#ayuda .grid-3{ 
-  margin-top: 10px;        /* antes 14–16px */
-  gap: 16px;               /* cards más juntas */
+/* Las 3 cards pegadas sin exceso de espacio arriba */
+#ayuda .grid-3{
+  margin-top: 8px;                    /* antes 14–16px */
+  gap: 16px;
 }
 
-/* En móvil, que use todo el ancho pero con poco espacio extra */
+/* En móvil, mantener todo compacto */
 @media (max-width: 720px){
-  #ayuda{ padding-top: 28px; padding-bottom: 24px; }
-  #ayuda > p{ max-width: 100%; margin: 6px 0; }
-  #ayuda .grid-3{ gap: 12px; margin-top: 8px; }
+  #ayuda section[aria-label="Filosofía de trabajo"] p{ max-width: 100%; }
+  #ayuda .grid-3{ margin-top: 6px; gap: 12px; }
 }
 </style>
 
