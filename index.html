@@ -161,47 +161,34 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
 }
+/* ——— Afinado de la sección “Mi enfoque” ——— */
 
-  /* ——— Micro-tuning visual (armónico y profesional) ——— */
-
-/* 1) “Mi enfoque”: ancho cómodo y aire entre párrafos */
-#ayuda p{
-  max-width: 90ch;      /* lectura cómoda en desktop */
-  margin: 0 0 10px;     /* separación pareja */
+/* 1) Filosofía: ancho cómodo y color más suave */
+#ayuda > p{
+  max-width: 78ch;         /* lectura cómoda en desktop */
+  color: var(--muted);     /* baja intensidad del párrafo */
+  margin: 0 0 10px;
 }
 
-/* 2) Subtítulos dentro de la filosofía: sobrios y consistentes */
-#ayuda h3{
-  font-size: 1.05rem;
+/* 2) Subtítulos de la filosofía: más discretos */
+#ayuda > h3{
+  font-size: 1rem;         /* más chico que un H2 */
   line-height: 1.5;
   margin: 14px 0 6px;
-  font-weight: 800;     /* fuerte pero no exagerado */
-  color: #2b2a27;
+  font-weight: 800;
+  color: #3a352e;          /* menos contrastado que el H2 */
 }
 
-/* 3) Cards de “Mi enfoque”: mismo aire y sombra suave */
-#ayuda .card{
-  padding: 18px;
-  box-shadow: var(--shadow-s);
-}
+/* 3) Separación visual entre la filosofía y las cards */
+#ayuda .grid-3{ margin-top: 16px; }
 
-/* 4) Separación entre la filosofía y las cards */
-#ayuda .grid-3{ margin-top: 14px; }
+/* 4) Cards con aire y sombra pareja */
+#ayuda .card{ padding: 18px; box-shadow: var(--shadow-s); }
 
-/* 5) Consistencia en listas y cajas de la sección anterior */
-#que .box{ margin-bottom: 18px; }
-
-/* 6) CTA dentro de FAQ: centrado y con respiración */
-#faq .cta{
-  display: inline-flex;
-  margin: 8px auto 0;
-}
-
-/* 7) Responsive: columnas con más aire en móvil */
+/* 5) Mobile: que la filosofía use todo el ancho y respire */
 @media (max-width: 720px){
+  #ayuda > p{ max-width: 100%; }
   #ayuda .grid-3{ gap: 14px; }
-  #ayuda h3{ margin-top: 12px; }
-  #ayuda p{ max-width: 100%; }
 }
 </style>
 
