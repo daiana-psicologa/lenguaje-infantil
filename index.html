@@ -162,49 +162,38 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .gallery{grid-template-columns:1fr}
 }
 
-  /* ——— Mi enfoque: versión editorial 1 columna ——— */
-#ayuda{
-  padding-top: 28px;
-  padding-bottom: 22px;
-}
-#ayuda > h2{
-  margin: 0 0 10px;
-}
-#ayuda > h2::after{ display:none; }   /* quitamos la barra de color */
-
-/* Texto centrado en columna angosta, sin columnas dobles */
-#ayuda .philo{
-  max-width: 760px;        /* lectura cómoda */
-  margin: 8px auto 10px;   /* centrado */
+  /* Caja de Mi enfoque */
+#ayuda .box-enfoque{
+  margin: 10px 0 12px;        /* separa del título y de las cards */
+  padding: 22px 22px;         /* un poco más de aire */
 }
 
-#ayuda .philo h3{
+/* Columna editorial centrada dentro de la caja */
+#ayuda .box-enfoque .philo{
+  max-width: 760px;           /* lectura cómoda */
+  margin: 0 auto;             /* centrado */
+}
+#ayuda .box-enfoque .philo h3{
   font-size: 1rem;
-  line-height: 1.5;
   margin: 10px 0 4px;
   font-weight: 800;
   color: #2f2a24;
 }
-
-#ayuda .philo p{
-  margin: 6px 0 10px;      /* aire justo */
+#ayuda .box-enfoque .philo p{
+  margin: 6px 0 10px;
   line-height: 1.68;
   color: var(--muted);
-  text-align: left;         /* más natural que justificado */
 }
 
-/* Cards bien pegadas al texto */
-#ayuda .grid-3{
-  margin-top: 10px;
-  gap: 16px;
-}
+/* Cards pegadas a la caja */
+#ayuda .grid-3{ margin-top: 10px; gap: 16px; }
 
-/* Móvil: todo igual de prolijo */
 @media (max-width: 720px){
-  #ayuda{ padding-top: 24px; padding-bottom: 18px; }
-  #ayuda .philo{ max-width: 100%; padding: 0 4px; }
+  #ayuda .box-enfoque{ padding: 18px; margin: 8px 0 10px; }
+  #ayuda .box-enfoque .philo{ max-width: 100%; }
   #ayuda .grid-3{ margin-top: 8px; gap: 12px; }
 }
+
 </style>
 
 <!-- Schema.org (JSON-LD): Negocio Local de Psicología Infantil en Neuquén -->
@@ -342,30 +331,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="container" id="ayuda">
   <h2>Mi enfoque</h2>
 
-  <!-- Filosofía (un solo contenedor) -->
-  <div class="philo">
-    <h3>Sencillez, humanidad y práctica clínica rigurosa</h3>
-    <p>Cada proceso se diseña con el niño y su entorno familiar. No aplico recetas: las estrategias se adaptan a cada historia, ritmo y momento del desarrollo.</p>
+  <section class="container" id="ayuda">
+  <h2>Mi enfoque</h2>
 
-    <h3>Lo clínico se une a la sabiduría familiar</h3>
-    <p>Yo aporto el marco psicológico y las herramientas; las familias aportan el conocimiento más valioso sobre su hijo. El avance aparece cuando unimos ambas miradas con respeto y colaboración.</p>
+  <!-- Caja blanca como la de arriba -->
+  <div class="box box-enfoque">
+    <div class="philo">
+      <h3>Sencillez, humanidad y práctica clínica rigurosa</h3>
+      <p>Cada proceso se diseña con el niño y su entorno familiar. No aplico recetas: las estrategias se adaptan a cada historia, ritmo y momento del desarrollo.</p>
 
-    <h3>Si lo de siempre no funciona, probamos algo distinto</h3>
-    <p>Repetir estrategias que no ayudan solo genera frustración. En sesión buscamos alternativas realistas y aplicables en casa y en la escuela, evitando fórmulas generales.</p>
+      <h3>Lo clínico se une a la sabiduría familiar</h3>
+      <p>Yo aporto el marco psicológico y las herramientas; las familias aportan el conocimiento más valioso sobre su hijo. El avance aparece cuando unimos ambas miradas con respeto y colaboración.</p>
 
-    <h3>El vínculo es el centro del trabajo</h3>
-    <p>Sin conexión emocional, el proceso no avanza. La relación con el niño y su familia es la base desde la cual construimos confianza, curiosidad y aprendizaje.</p>
+      <h3>Si lo de siempre no funciona, probamos algo distinto</h3>
+      <p>Repetir estrategias que no ayudan solo genera frustración. En sesión buscamos alternativas realistas y aplicables en casa y en la escuela, evitando fórmulas generales.</p>
 
-    <h3>Técnica al servicio de la persona</h3>
-    <p>No creo en protocolos rígidos ni en “trucos” universales. Las intervenciones se ajustan al momento, la edad y las necesidades emocionales del niño, buscando cambios visibles en su comunicación cotidiana.</p>
+      <h3>El vínculo es el centro del trabajo</h3>
+      <p>Sin conexión emocional, el proceso no avanza. La relación con el niño y su familia es la base desde la cual construimos confianza, curiosidad y aprendizaje.</p>
 
-    <h3>Enfoque humanista e integrativo</h3>
-    <p>Trabajo desde una mirada psicológica del desarrollo y la Terapia Focalizada en la Emoción. Integro herramientas lúdicas, existenciales y sistémicas que ayudan a comprender al niño más allá del síntoma.</p>
+      <h3>Técnica al servicio de la persona</h3>
+      <p>No creo en protocolos rígidos ni en “trucos” universales. Las intervenciones se ajustan al momento, la edad y las necesidades emocionales del niño, buscando cambios visibles en su comunicación cotidiana.</p>
 
-    <h3>Formato y objetivo</h3>
-    <p>La atención es <strong>presencial en Neuquén Capital</strong> (y online si se requiere). El objetivo es favorecer una comunicación clara, emocionalmente sana y funcional, para que cada niño pueda expresarse y sentirse comprendido.</p>
+      <h3>Enfoque humanista e integrativo</h3>
+      <p>Trabajo desde una mirada psicológica del desarrollo y la Terapia Focalizada en la Emoción. Integro herramientas lúdicas, existenciales y sistémicas que ayudan a comprender al niño más allá del síntoma.</p>
+
+      <h3>Formato y objetivo</h3>
+      <p>La atención es <strong>presencial en Neuquén Capital</strong> (y online si se requiere). El objetivo es favorecer una comunicación clara, emocionalmente sana y funcional, para que cada niño pueda expresarse y sentirse comprendido.</p>
+    </div>
   </div>
-  <!-- /Filosofía -->
+  <!-- /Caja blanca -->
 
   <!-- tus 3 cards -->
   <div class="grid-3">
