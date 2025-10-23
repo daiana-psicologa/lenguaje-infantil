@@ -155,14 +155,29 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
 .footer h4{margin:6px 0 8px}
 .footer a{text-decoration:none; color:#2e2a26}
 .legal{display:flex; justify-content:space-between; align-items:center; padding:10px 0 24px; color:#6f6a62; font-size:.92rem}
-/* Disclaimer en el footer */
+
+  /* Disclaimer: más aire y separación visual */
 .disclaimer{
-  margin-top: 10px;
-  font-size: .92rem;
-  line-height: 1.6;
+  margin-top: 18px;             /* más separación del bloque de botones */
+  padding-top: 12px;            /* aire interno arriba */
+  border-top: 1px solid var(--line);  /* línea sutil separadora */
+  font-size: .95rem;            /* un pelín más grande */
+  line-height: 1.75;            /* interlineado más suelto */
   color: #6f6a62;
-  max-width: 60ch;        /* opcional: limita el ancho para mejor lectura */
+  max-width: 70ch;              /* ancho de lectura cómodo (antes 60ch) */
 }
+
+/* Un poco de aire general en el footer izquierdo */
+.footer > div:first-child p{
+  margin: .35rem 0 .95rem;      /* separa mejor los párrafos del bloque */
+}
+
+/* En mobile: a pantalla completa y más separación entre bloques */
+@media (max-width: 980px){
+  .footer{ grid-template-columns: 1fr; gap: 18px; }
+  .disclaimer{ max-width: none; } /* que use el ancho del contenedor */
+}
+
 /* Responsive */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
