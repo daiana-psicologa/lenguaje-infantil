@@ -161,15 +161,17 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   .hero{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
 }
-/* ====== MI ENFOQUE – afinado pro sin tocar HTML ====== */
+/* ===== MI ENFOQUE — wrapper centrado, sin huecos ===== */
 
-/* 0) Subrayado discreto del H2 y menos aire arriba/abajo */
+/* Aire general reducido en la sección */
 #ayuda{
-  padding-top: 32px;           /* menos aire que el default */
-  padding-bottom: 24px;
+  padding-top: 24px !important;
+  padding-bottom: 20px !important;
 }
+
+/* Subrayado sutil del H2 */
 #ayuda > h2{
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   position: relative;
 }
 #ayuda > h2::after{
@@ -182,64 +184,54 @@ footer{background:#fff; border-top:1px solid var(--line); margin-top:32px}
   margin:8px 0 0;
 }
 
-/* 1) Centrar la columna de texto (h3 + p) y justificar párrafos
-      – funciona tanto si NO hay wrapper como si usaste
-      <section aria-label="Filosofía de trabajo"> */
-#ayuda > h3,
-#ayuda > p,
-#ayuda section[aria-label="Filosofía de trabajo"] > h3,
-#ayuda section[aria-label="Filosofía de trabajo"] > p{
-  max-width: 880px;            /* columna centrada */
-  margin-left: auto;
-  margin-right: auto;
+/* Wrapper de la filosofía: centrado + 2 columnas en desktop */
+#ayuda .philo{
+  max-width: 880px;
+  margin: 6px auto 8px;       /* pegado al H2 y a las cards */
+  column-count: 2;
+  column-gap: 28px;
 }
 
-#ayuda > h3,
-#ayuda section[aria-label="Filosofía de trabajo"] > h3{
+/* Títulos y párrafos dentro de la filosofía */
+#ayuda .philo h3{
   font-size: 1rem;
   line-height: 1.5;
-  margin: 10px 0 4px;
+  margin: 8px 0 2px !important;
   font-weight: 800;
   color: #3a352e;
+  break-after: avoid;
 }
-
-#ayuda > p,
-#ayuda section[aria-label="Filosofía de trabajo"] > p{
-  margin: 6px 0;
-  line-height: 1.64;
+#ayuda .philo p{
+  margin: 4px 0 8px !important; /* compacta fuerte */
+  line-height: 1.6;
   color: var(--muted);
-  text-align: justify;         /* más parejo visualmente */
+  text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
+  orphans: 2; widows: 2;
 }
 
-/* 2) Eliminar el “hueco” antes de las 3 cards */
-#ayuda > p:last-of-type,
-#ayuda section[aria-label="Filosofía de trabajo"] > p:last-child{
-  margin-bottom: 6px;          /* cierre corto del bloque de texto */
-}
+/* Eliminar cualquier remate grande del último párrafo */
+#ayuda .philo > :last-child{ margin-bottom: 0 !important; }
 
-/* 3) Grid de 3 cards: pegado al texto y centrado */
+/* Cards: sin hueco arriba y centradas */
 #ayuda .grid-3{
-  margin-top: 10px;            /* antes estaba alto */
+  margin-top: 6px !important;   /* clave para borrar el hueco */
   gap: 16px;
-  max-width: 1120px;
+  max-width: var(--max);
   margin-left: auto;
   margin-right: auto;
 }
-
 #ayuda .card{ padding: 18px; box-shadow: var(--shadow-s); }
 
-/* 4) Mobile: que todo respire pero sin huecos grandes */
+/* Responsive: 1 columna en móvil, todo compacto */
+@media (max-width: 900px){
+  #ayuda .philo{ column-count: 1; }
+}
 @media (max-width: 720px){
-  #ayuda{ padding-top: 26px; padding-bottom: 20px; }
-  #ayuda > h3,
-  #ayuda > p,
-  #ayuda section[aria-label="Filosofía de trabajo"] > h3,
-  #ayuda section[aria-label="Filosofía de trabajo"] > p{
-    max-width: 100%;
-  }
-  #ayuda .grid-3{ margin-top: 8px; gap: 12px; }
+  #ayuda{ padding-top: 20px !important; padding-bottom: 18px !important; }
+  #ayuda .philo{ margin: 6px auto 6px; }
+  #ayuda .grid-3{ margin-top: 6px !important; gap: 12px; }
 }
 </style>
 
@@ -377,33 +369,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="container" id="ayuda">
   <h2>Mi enfoque</h2>
-  
- <!-- Filosofía de trabajo (pegar aquí, debajo de <h2>Mi enfoque</h2>) -->
-<section aria-label="Filosofía de trabajo">
-  <h3>Sencillez, humanidad y práctica clínica rigurosa</h3>
-  <p>Cada proceso se diseña con el niño y su entorno familiar. No aplico recetas: las estrategias se adaptan a cada historia, ritmo y momento del desarrollo.</p>
 
-  <h3>Lo clínico se une a la sabiduría familiar</h3>
-  <p>Yo aporto el marco psicológico y las herramientas; las familias aportan el conocimiento más valioso sobre su hijo. El avance aparece cuando unimos ambas miradas con respeto y colaboración.</p>
+  <!-- Filosofía (un solo contenedor) -->
+  <div class="philo">
+    <h3>Sencillez, humanidad y práctica clínica rigurosa</h3>
+    <p>Cada proceso se diseña con el niño y su entorno familiar. No aplico recetas: las estrategias se adaptan a cada historia, ritmo y momento del desarrollo.</p>
 
-  <h3>Si lo de siempre no funciona, probamos algo distinto</h3>
-  <p>Repetir estrategias que no ayudan solo genera frustración. En sesión buscamos alternativas realistas y aplicables en casa y en la escuela, evitando fórmulas generales.</p>
+    <h3>Lo clínico se une a la sabiduría familiar</h3>
+    <p>Yo aporto el marco psicológico y las herramientas; las familias aportan el conocimiento más valioso sobre su hijo. El avance aparece cuando unimos ambas miradas con respeto y colaboración.</p>
 
-  <h3>El vínculo es el centro del trabajo</h3>
-  <p>Sin conexión emocional, el proceso no avanza. La relación con el niño y su familia es la base desde la cual construimos confianza, curiosidad y aprendizaje.</p>
+    <h3>Si lo de siempre no funciona, probamos algo distinto</h3>
+    <p>Repetir estrategias que no ayudan solo genera frustración. En sesión buscamos alternativas realistas y aplicables en casa y en la escuela, evitando fórmulas generales.</p>
 
-  <h3>Técnica al servicio de la persona</h3>
-  <p>No creo en protocolos rígidos ni en “trucos” universales. Las intervenciones se ajustan al momento, la edad y las necesidades emocionales del niño, buscando cambios visibles en su comunicación cotidiana.</p>
+    <h3>El vínculo es el centro del trabajo</h3>
+    <p>Sin conexión emocional, el proceso no avanza. La relación con el niño y su familia es la base desde la cual construimos confianza, curiosidad y aprendizaje.</p>
 
-  <h3>Enfoque humanista e integrativo</h3>
-  <p>Trabajo desde una mirada psicológica del desarrollo y la Terapia Focalizada en la Emoción. Integro herramientas lúdicas, existenciales y sistémicas que ayudan a comprender al niño más allá del síntoma.</p>
+    <h3>Técnica al servicio de la persona</h3>
+    <p>No creo en protocolos rígidos ni en “trucos” universales. Las intervenciones se ajustan al momento, la edad y las necesidades emocionales del niño, buscando cambios visibles en su comunicación cotidiana.</p>
 
-  <h3>Formato y objetivo</h3>
-  <p>La atención es <strong>presencial en Neuquén Capital</strong> (y online si se requiere). El objetivo es favorecer una comunicación clara, emocionalmente sana y funcional, para que cada niño pueda expresarse y sentirse comprendido.</p>
-</section>
-<!-- Fin filosofía -->
+    <h3>Enfoque humanista e integrativo</h3>
+    <p>Trabajo desde una mirada psicológica del desarrollo y la Terapia Focalizada en la Emoción. Integro herramientas lúdicas, existenciales y sistémicas que ayudan a comprender al niño más allá del síntoma.</p>
 
-  
+    <h3>Formato y objetivo</h3>
+    <p>La atención es <strong>presencial en Neuquén Capital</strong> (y online si se requiere). El objetivo es favorecer una comunicación clara, emocionalmente sana y funcional, para que cada niño pueda expresarse y sentirse comprendido.</p>
+  </div>
+  <!-- /Filosofía -->
+
+  <!-- tus 3 cards -->
   <div class="grid-3">
     <article class="card">
       <span class="tag">Comunicación</span>
